@@ -1,0 +1,396 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --success-color: #22c55e;
+    --error-color: #ef4444;
+    --border-color: rgba(148, 163, 184, 0.1);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 8px;
+    --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Animation */
+.background-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.blob {
+    position: absolute;
+    filter: blur(80px);
+    opacity: 0.4;
+    border-radius: 50%;
+    animation: move 20s infinite alternate;
+}
+
+.blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: #4f46e5;
+}
+
+.blob-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: #06b6d4;
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    top: 40%;
+    left: 40%;
+    width: 400px;
+    height: 400px;
+    background: #ec4899;
+    animation-delay: -10s;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+}
+
+/* Layout */
+.app-container {
+    max-width: 1200px;
+    /* Increased width to fit sidebar */
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-content-wrapper {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    overflow: hidden;
+    /* Prevent overflow from nested scrolls */
+}
+
+/* Quiz Card */
+.quiz-container {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    /* Changed from center to allow scrolling if needed */
+    justify-content: center;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    /* Limit width of card */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.sidebar h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.question-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 8px;
+}
+
+.grid-item {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.grid-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.grid-item.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.grid-item.answered {
+    border-color: var(--success-color);
+    color: var(--success-color);
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.grid-item.wrong {
+    border-color: var(--error-color);
+    color: var(--error-color);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.question-id {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+/* Options */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.option-btn:hover:not(.disabled) {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(4px);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+.option-btn.selected {
+    border-color: var(--accent-color);
+    background: rgba(59, 130, 246, 0.1);
+    color: white;
+}
+
+.option-btn.correct {
+    border-color: var(--success-color);
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+}
+
+.option-btn.wrong {
+    border-color: var(--error-color);
+    background: rgba(239, 68, 68, 0.1);
+    color: #f87171;
+}
+
+.option-btn.correct::after {
+    content: "✓";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+.option-btn.wrong::after {
+    content: "✕";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+/* Feedback */
+.feedback-area {
+    margin-top: 1.5rem;
+    min-height: 24px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    border: none;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+}
+
+.btn-primary:active {
+    transform: scale(0.96);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Submit Button in Options */
+.submit-btn {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .main-content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-height: 200px;
+        /* Limit height on mobile */
+        order: -1;
+        /* Show above or below? Let's keep it below card or maybe above? Let's put it below for now so question is first */
+        order: 1;
+    }
+
+    .app-container {
+        padding: 16px;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .question-text {
+        font-size: 1.25rem;
+    }
+}

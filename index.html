@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 深度学习题库</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <h1>AI Learning Hub</h1>
+                <div class="progress-container">
+                    <span id="progress-text">1 / 50</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="main-content-wrapper">
+            <main class="quiz-container">
+                <div class="card" id="question-card">
+                    <div class="question-header">
+                        <span class="badge" id="question-type">选择题</span>
+                        <span class="question-id">Question <span id="q-id">1</span></span>
+                    </div>
+
+                    <h2 class="question-text" id="question-text">
+                        加载中...
+                    </h2>
+
+                    <div class="options-container" id="options-container">
+                        <!-- Options injected here -->
+                    </div>
+
+                    <div class="feedback-area" id="feedback">
+                        <!-- Feedback message -->
+                    </div>
+                </div>
+            </main>
+
+            <aside class="sidebar">
+                <h3>题目导航</h3>
+                <div class="question-grid" id="question-grid">
+                    <!-- Grid items injected here -->
+                </div>
+            </aside>
+        </div>
+
+        <footer class="controls">
+            <button class="btn btn-secondary" id="btn-prev" disabled>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+                Previous
+            </button>
+            <button class="btn btn-primary" id="btn-next">
+                Next
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </button>
+        </footer>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
