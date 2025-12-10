@@ -368,29 +368,337 @@ body {
 }
 
 /* Mobile Responsive */
-@media (max-width: 900px) {
-    .main-content-wrapper {
-        flex-direction: column;
-    }
 
+/* Tablet and small laptops */
+@media (max-width: 1024px) {
     .sidebar {
-        width: 100%;
-        max-height: 200px;
-        /* Limit height on mobile */
-        order: -1;
-        /* Show above or below? Let's keep it below card or maybe above? Let's put it below for now so question is first */
-        order: 1;
-    }
-
-    .app-container {
-        padding: 16px;
+        width: 250px;
     }
 
     .card {
-        padding: 1.5rem;
+        max-width: 650px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 12px;
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 100px;
+        /* Space for fixed controls */
+    }
+
+    .main-content-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* Header Optimization */
+    .header {
+        padding: 0.75rem 0;
+    }
+
+    .header-content h1 {
+        font-size: 1.25rem;
+    }
+
+    .progress-container {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-end;
+    }
+
+    #progress-text {
+        font-size: 0.75rem;
+    }
+
+    .progress-bar {
+        width: 120px;
+        height: 4px;
+    }
+
+    /* Question Card Optimization */
+    .quiz-container {
+        overflow: visible;
+        padding-bottom: 0;
+    }
+
+    .card {
+        padding: 1.25rem;
+        border-radius: var(--radius-md);
+        max-width: 100%;
+    }
+
+    .question-header {
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .badge {
+        font-size: 0.65rem;
+        padding: 3px 10px;
+    }
+
+    .question-id {
+        font-size: 0.75rem;
     }
 
     .question-text {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
+
+    /* Options - Better Touch Targets */
+    .options-container {
+        gap: 10px;
+    }
+
+    .option-btn {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+        border-radius: var(--radius-sm);
+        min-height: 52px;
+        /* Better touch target */
+        line-height: 1.4;
+    }
+
+    .option-btn:hover:not(.disabled) {
+        transform: none;
+        /* Disable hover transform on mobile */
+    }
+
+    .option-btn:active:not(.disabled) {
+        transform: scale(0.98);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .option-btn.correct::after,
+    .option-btn.wrong::after {
+        right: 14px;
+        font-size: 1rem;
+    }
+
+    /* Sidebar - Collapsible Panel */
+    .sidebar {
+        width: 100%;
+        order: 1;
+        border-radius: var(--radius-md);
+        padding: 0;
+        max-height: none;
+        background: var(--card-bg);
+        overflow: hidden;
+    }
+
+    .sidebar h3 {
+        padding: 1rem;
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: none;
+        font-size: 0.95rem;
+    }
+
+    .sidebar h3::after {
+        content: "▼";
+        font-size: 0.6rem;
+        transition: transform 0.3s;
+        opacity: 0.6;
+    }
+
+    .sidebar.collapsed h3::after {
+        transform: rotate(-90deg);
+    }
+
+    .sidebar.collapsed .question-grid {
+        display: none;
+    }
+
+    .question-grid {
+        padding: 0 1rem 1rem;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 6px;
+    }
+
+    .grid-item {
+        font-size: 0.75rem;
+        border-radius: 6px;
+        min-height: 36px;
+    }
+
+    /* Feedback */
+    .feedback-area {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Fixed Bottom Controls */
+    .controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 12px 16px;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border-color);
+        z-index: 100;
+        margin: 0;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-radius: var(--radius-sm);
+        flex: 1;
+        justify-content: center;
+        max-width: 45%;
+    }
+
+    .btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Background blobs - reduce on mobile for performance */
+    .blob {
+        filter: blur(60px);
+        opacity: 0.25;
+    }
+
+    .blob-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .blob-2 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .blob-3 {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Submit button optimization */
+    .submit-btn {
+        margin-top: 12px;
+        padding: 14px 20px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 10px;
+        padding-bottom: 90px;
+    }
+
+    .header-content h1 {
+        font-size: 1.1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .question-text {
+        font-size: 1rem;
+    }
+
+    .option-btn {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    .question-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 5px;
+    }
+
+    .grid-item {
+        font-size: 0.7rem;
+        min-height: 32px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        gap: 4px;
+    }
+
+    .btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Hide button text on very small screens */
+    .btn span {
+        display: none;
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .app-container {
+        padding-bottom: 80px;
+    }
+
+    .controls {
+        padding: 8px 16px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .sidebar {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+
+    .question-grid {
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
+
+/* Safe Area for notched devices (iPhone X, etc.) */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    @media (max-width: 768px) {
+        .controls {
+            padding-bottom: calc(12px + env(safe-area-inset-bottom));
+        }
+
+        .app-container {
+            padding-bottom: calc(100px + env(safe-area-inset-bottom));
+        }
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .option-btn:hover:not(.disabled) {
+        transform: none;
+        background: rgba(255, 255, 255, 0.03);
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .grid-item:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Increase tap targets */
+    .option-btn {
+        min-height: 48px;
+    }
+
+    .grid-item {
+        min-height: 40px;
     }
 }

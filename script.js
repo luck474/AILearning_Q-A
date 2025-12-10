@@ -21,6 +21,7 @@ function init() {
     renderGrid();
     loadQuestion(currentQuestionIndex);
     updateProgress();
+    initMobileSidebar();
 
     btnNext.addEventListener('click', () => {
         if (currentQuestionIndex < questions.length - 1) {
@@ -35,6 +36,40 @@ function init() {
             currentQuestionIndex--;
             loadQuestion(currentQuestionIndex);
             updateProgress();
+        }
+    });
+}
+
+// Mobile Sidebar Toggle
+function initMobileSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarTitle = sidebar.querySelector('h3');
+
+    // Check if mobile
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    // Initialize collapsed state on mobile
+    if (isMobile()) {
+        sidebar.classList.add('collapsed');
+    }
+
+    // Toggle on click
+    sidebarTitle.addEventListener('click', () => {
+        if (isMobile()) {
+            sidebar.classList.toggle('collapsed');
+        }
+    });
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+        if (isMobile()) {
+            if (!sidebar.classList.contains('collapsed')) {
+                // Keep expanded state if user manually expanded
+            }
+        } else {
+            sidebar.classList.remove('collapsed');
         }
     });
 }
