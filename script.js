@@ -1,8 +1,8 @@
-
 // State
+let currentCourse = null;
 let currentQuestionIndex = 0;
 let score = 0;
-let userAnswers = new Array(questions.length).fill(null);
+let userAnswers = []; // Initialized when course loads
 
 // DOM Elements
 const qIdEl = document.getElementById('q-id');
@@ -15,16 +15,16 @@ const btnPrev = document.getElementById('btn-prev');
 const feedbackEl = document.getElementById('feedback');
 const qTypeBadge = document.getElementById('question-type');
 const questionGrid = document.getElementById('question-grid');
+const courseSelect = document.getElementById('course-select');
 
 // Initialize
 function init() {
-    renderGrid();
-    loadQuestion(currentQuestionIndex);
-    updateProgress();
+    initCourseSelector();
     initMobileSidebar();
 
     btnNext.addEventListener('click', () => {
-        if (currentQuestionIndex < questions.length - 1) {
+        if (!currentCourse) return;
+        if (currentQuestionIndex < currentCourse.questions.length - 1) {
             currentQuestionIndex++;
             loadQuestion(currentQuestionIndex);
             updateProgress();
@@ -38,6 +38,41 @@ function init() {
             updateProgress();
         }
     });
+}
+
+function initCourseSelector() {
+    // Populate dropdown
+    courseSelect.innerHTML = '';
+    courses.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c.id;
+        opt.textContent = c.name;
+        courseSelect.appendChild(opt);
+    });
+
+    // Handle Change
+    courseSelect.addEventListener('change', (e) => {
+        loadCourse(e.target.value);
+    });
+
+    // Load initial
+    if (courses.length > 0) {
+        loadCourse(courses[0].id);
+    }
+}
+
+function loadCourse(courseId) {
+    const course = courses.find(c => c.id === courseId);
+    if (!course) return;
+
+    currentCourse = course;
+    currentQuestionIndex = 0;
+    score = 0;
+    userAnswers = new Array(course.questions.length).fill(null);
+
+    renderGrid();
+    loadQuestion(0);
+    updateProgress();
 }
 
 // Mobile Sidebar Toggle
@@ -75,7 +110,7 @@ function initMobileSidebar() {
 }
 
 function loadQuestion(index) {
-    const q = questions[index];
+    const q = currentCourse.questions[index];
 
     // Update Header
     qIdEl.textContent = q.id;
@@ -156,7 +191,7 @@ function loadQuestion(index) {
 
     // Update Buttons
     btnPrev.disabled = index === 0;
-    btnNext.innerHTML = index === questions.length - 1 ? 'Finish' : `Next <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>`;
+    btnNext.innerHTML = index === currentCourse.questions.length - 1 ? 'Finish' : `Next <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>`;
 }
 
 // Track current selections for multiple response
@@ -290,15 +325,16 @@ function checkAnswerVisuals(selectedBtn, selectedValue, correctKey, isRestoring,
 }
 
 function updateProgress() {
-    progressText.innerText = `${currentQuestionIndex + 1} / ${questions.length}`;
-    const pct = ((currentQuestionIndex + 1) / questions.length) * 100;
+    const total = currentCourse.questions.length;
+    progressText.innerText = `${currentQuestionIndex + 1} / ${total}`;
+    const pct = ((currentQuestionIndex + 1) / total) * 100;
     progressFill.style.width = `${pct}%`;
     updateGridHighlight();
 }
 
 function renderGrid() {
     questionGrid.innerHTML = '';
-    questions.forEach((q, idx) => {
+    currentCourse.questions.forEach((q, idx) => {
         const item = document.createElement('div');
         item.className = 'grid-item';
         item.textContent = idx + 1;

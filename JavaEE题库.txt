@@ -1,0 +1,1531 @@
+1. (判断题)Spring是一个轻量级的Java开发框架
+A. 对
+B. 错
+我的答案:对正确答案:对
+10分
+AI讲解
+2. (判断题)注入bean的注解中，默认按照Bean类型进行装备的注解是@Resource
+A. 对
+B. 错
+我的答案:错正确答案:错
+10分
+知识点：
+AI讲解
+3. (判断题)Spring框架实例化Bean最常用的方法是构造方法实例化。
+A. 对
+B. 错
+我的答案:对正确答案:对
+10分
+知识点：
+AI讲解
+二. 多选题（共3题，30分）
+4. (多选题)Spring的核心容器包含的模块有
+A. Spring-context
+B. Spring-expression
+C. Spring-context-support
+D. Spring-core
+E. Spring-beans
+我的答案:ABCDE:Spring-context; Spring-expression; Spring-context-support; Spring-core; Spring-beans;正确答案:ABCDE:Spring-context; Spring-expression; Spring-context-support; Spring-core; Spring-beans;
+10分
+AI讲解
+5. (多选题)关于Spring的IOC，以下说法正确的是
+A. 对象之间的关系有Spring容器进行管理控制
+B. Spring容器负责将被依赖对象赋值给调用者的成员变量。
+C. Spring容器负责创建对象
+D. 依赖注入的目的是为解耦
+我的答案:BD:Spring容器负责将被依赖对象赋值给调用者的成员变量。; 依赖注入的目的是为解耦;正确答案:BD:Spring容器负责将被依赖对象赋值给调用者的成员变量。; 依赖注入的目的是为解耦;
+10分
+知识点：
+AI讲解
+6. (多选题)Spring框架实例化Bean的方法有
+A. 构造方法实例化
+B. 静态工厂实例化
+C. 实例工厂实例化
+D. 初始化方法实例化
+我的答案:ABC:构造方法实例化; 静态工厂实例化; 实例工厂实例化;正确答案:ABC:构造方法实例化; 静态工厂实例化; 实例工厂实例化;
+10分
+知识点：
+AI讲解
+三. 单选题（共2题，20分）
+7. (单选题)Spring中提供IOC/DI功能的模块是
+A. Spring-context
+B. Spring-expression
+C. Spring-context-support
+D. Spring-beans
+E. Spring-core
+我的答案:E:Spring-core;正确答案:E:Spring-core;
+10分
+AI讲解
+8. (单选题)Spring中提供对象管理的模块是
+A. Spring-beans
+B. Spring-expression
+C. Spring-context-support
+D. Spring-context
+E. Spring-core
+我的答案:A:Spring-beans;正确答案:A:Spring-beans;
+10分
+AI讲解
+四. 填空题（共2题，20分）
+9. (填空题)仅仅声明一个通用组件对象的注解是@__________;标注数据库访问层bean的注解是@__________；标注业务逻辑层组件的注解是@___________；标注控制器组件的注解是@_________________.
+我的答案：
+10分
+(1) Component 
+(2) Repository 
+(3) Service 
+(4) Controller 
+正确答案：
+(1) Component
+(2) Repository
+(3) Service
+(4) Controller
+知识点：
+AI讲解
+10. (填空题)当@Autowired注解需要按照名称来装配注入是，需要结合@__________注解一起使用。
+我的答案：
+10分
+(1) Qualifier 
+正确答案：
+(1) Qualifier
+
+一. 单选题（共8题，32.8分）
+1. (单选题)SpringMVC中寻找控制器的组件是
+A. Controller
+B. HandlerMapping
+C. DispatcherServlet
+D. servlet-name-servlet.xml
+我的答案:B:HandlerMapping;正确答案:B:HandlerMapping;
+4.1分
+AI讲解
+2. (单选题)小明的SpringMVC应用的包com.example.demo下创建了该应用的Java配置类，以下哪个组合是正确的
+A.
+Java配置类中的扫描注解为：@ComponentScan("com.example.demo.controller")
+
+控制器类所在包为controller
+
+B.
+Java配置类中的扫描注解为：@ComponentScan
+
+控制器类所在包为com.example.demo.controller
+
+C.
+Java配置类中的扫描注解为：@ComponentScan("controller")
+
+控制器类所在包为com.example.demo.controller
+
+D.
+Java配置类中的扫描注解为：@ComponentScan
+
+控制器类所在包为controller
+
+我的答案:B:Java配置类中的扫描注解为：@ComponentScan 控制器类所在包为com.example.demo.controller;正确答案:B:Java配置类中的扫描注解为：@ComponentScan 控制器类所在包为com.example.demo.controller;
+4.1分
+答案解析：
+AI讲解
+3. (单选题)
+有如下控制器类
+
+@RequestMapping("/user")
+
+public class TestController(){
+
+    @RequestMapping("/findByName")
+
+    public String addUser(User user, Model){ .....}
+
+}
+
+如果该应用的上下文路径（context-path）为/myoa，则下列哪个请求会执行addUser方法
+
+A. http://localhost:8080/user/findByName
+B. http://localhost:8080/myoa/user/
+C. http://localhost:8080/myoa/user/findByName
+D. http://localhost:8080/myoa/findByName
+我的答案:C:http://localhost:8080/myoa/user/findByName;正确答案:C:http://localhost:8080/myoa/user/findByName;
+4.1分
+答案解析：
+AI讲解
+4. (单选题)作为控制器方法参数的Model对象model，其存在的生命周期是
+A. session
+B. page
+C. request
+D. application
+我的答案:C:request;正确答案:C:request;
+4.1分
+AI讲解
+5. (单选题)SpringMVC的核心控制器是
+A. Listener
+B. Filter
+C. Servlet
+D. JSP
+我的答案:C:Servlet;正确答案:C:Servlet;
+4.1分
+AI讲解
+6. (单选题)对于SpringMVC的Java配置文件，可以实现的接口是
+A. WebMvcConfigurer
+B. Configuration
+C. WebApplicationInitializer
+D. AnnotationConfigWebApplicationContext
+我的答案:A:WebMvcConfigurer;正确答案:A:WebMvcConfigurer;
+4.1分
+AI讲解
+7. (单选题)在SpringMVC中，负责查找View并将模型数据传给视图，从而将结果渲染给客户端的是组件是
+A. View(JSP、HTML等)
+B. ModelAndView
+C. Model
+D. ViewResolver
+我的答案:D:ViewResolver;正确答案:D:ViewResolver;
+4.1分
+AI讲解
+8. (单选题)SpringMVC中，对HTTP请求进行实际处理的是
+A. HandlerMapping
+B. ViewResolver
+C. DispatcherServlet
+D. Controller
+我的答案:D:Controller;正确答案:D:Controller;
+4.1分
+AI讲解
+二. 多选题（共4题，16.8分）
+9. (多选题)在SpringMVC的web应用程序中 ，如果想使用Java配置文件对DispatchServlet进行配置，则可以实现的接口或继承的类有
+A. WebApplicationInitializer
+B. AnnotationConfigWebApplicationContext
+C. WebMvcConfigurer
+D. AbstractAnnotationConfigDispatcherServletInitializer
+我的答案:AD:WebApplicationInitializer; AbstractAnnotationConfigDispatcherServletInitializer;正确答案:AD:WebApplicationInitializer; AbstractAnnotationConfigDispatcherServletInitializer;
+4.2分
+AI讲解
+10. (多选题)SpringMVC中属于控制器的有
+A. 各个Controller
+B. HandlerMapping
+C. JSP、HTML
+D. DispatcherServlet
+我的答案:ABD:各个Controller; HandlerMapping; DispatcherServlet;正确答案:ABD:各个Controller; HandlerMapping; DispatcherServlet;
+4.2分
+AI讲解
+11. (多选题)关于SpringMVC的Java配置文件中的注解，下列描述正确的是
+A. 需要使用@Bean注解配置视图解析器、格式转换器等组件。
+B. 需要使用@EnableWebMvc注解开启默认配置
+C. 需使用@Configuration注解声明该类为Java配置类。
+D. 需要使用@ComponentScan注解扫描应用所需的各种用注解生成和注入的类
+我的答案:ABCD:需要使用@Bean注解配置视图解析器、格式转换器等组件。; 需要使用@EnableWebMvc注解开启默认配置; 需使用@Configuration注解声明该类为Java配置类。; 需要使用@ComponentScan注解扫描应用所需的各种用注解生成和注入的类;正确答案:ABCD:需要使用@Bean注解配置视图解析器、格式转换器等组件。; 需要使用@EnableWebMvc注解开启默认配置; 需使用@Configuration注解声明该类为Java配置类。; 需要使用@ComponentScan注解扫描应用所需的各种用注解生成和注入的类;
+4.2分
+答案解析：
+AI讲解
+12. (多选题)
+想让参数book暴露为模型数据，且其名称为bookInfo，则以下控制器方法正确的有，
+
+A.
+@RequestMapping("/add")
+
+public String addBook(Book book){.........}
+
+
+
+B.
+@RequestMapping("/add")
+
+public String addBook(Book book, Model model){
+
+    ........
+
+    model.addAttribute("bookInfo", book)
+
+   ........
+
+}
+
+
+
+C.
+@RequestMapping("/add")
+
+public String addBook(@ModelAttribute("bookinfo") Book book){.........}
+
+
+
+D.
+@RequestMapping("/add")
+
+public String addBook(@ModelAttribute Book book){.........}
+
+
+
+我的答案:BC:@RequestMapping("/add") public String addBook(Book book, Model model){ ........ model.addAttribute("bookInfo", book) ........ } ; @RequestMapping("/add") public String addBook(@ModelAttribute("bookinfo") Book book){.........} ;正确答案:BC:@RequestMapping("/add") public String addBook(Book book, Model model){ ........ model.addAttribute("bookInfo", book) ........ } ; @RequestMapping("/add") public String addBook(@ModelAttribute("bookinfo") Book book){.........} ;
+4.2分
+答案解析：
+AI讲解
+三. 填空题（共4题，16.8分）
+13. (填空题)在SpringMVC应用中，如果使用注解声明的控制器类和业务逻辑类分别在包controller、service中，则Java配置类中@ComponentScan的写法是：@ComponentScan(                         )。注意填写时不要留空格，注意大小写、中英文标点符号。
+我的答案：
+4.2分
+(1) {"controller","service"} 
+正确答案：
+(1) {"controller","service"};basePackages={"controller","service"}
+AI讲解
+14. (填空题)如果使用XML配置方式，在web.xml中DispatcherServlet命名为helloworld，则SpingMVC默认的配置文件名称为    （1）    ，默认的位置为：        （2）      。填写的时候注意大小、路径和文件后缀名。
+我的答案：
+4.2分
+(1) helloworld-servlet.xml 
+(2) /WEB-INF/ 
+正确答案：
+(1) helloworld-servlet.xml
+(2) /WEB-INF/;/WEB-INF;WEB-INF;WEB-INF/;classpath;classpath:;resources;resources/;/resources
+AI讲解
+15. (填空题)SpringMVC应用中，如果要将一个类声明为控制器，则需要使用注解____________________
+我的答案：
+4.2分
+(1) @Controller 
+正确答案：
+(1) @Controller
+AI讲解
+16. (填空题)
+有如下控制器方法，想让参数book暴露为模型数据，且其名称为bookInfo，请填上相应的内容：
+
+@RequestMapping("/add")
+
+public String addBook(___________ Book book){.........}
+
+我的答案：
+4.2分
+(1) @ModelAttribute("bookInfo") 
+正确答案：
+(1) @ModelAttribute("bookInfo")
+答案解析：
+AI讲解
+四. 判断题（共8题，33.6分）
+17. (判断题)控制器如果使用实体bean接受请求参数，则bean的属性名称必须和请求参数名称相同。
+A. 对
+B. 错
+我的答案:对正确答案:对
+4.2分
+AI讲解
+18. (判断题)如果想使用处理方法的形参接受请求参数，则必须在形参前加上@RequestParam注解
+A. 对
+B. 错
+我的答案:错正确答案:错
+4.2分
+AI讲解
+19. (判断题)使用处理方法的形参接收请求参数，则要求形参名称和请求参数名称必须一致。
+A. 对
+B. 错
+我的答案:对正确答案:对
+4.2分
+AI讲解
+20. (判断题)SpringMVC控制器处理方法中的return语句默认实现的重定向到视图。
+A. 对
+B. 错
+我的答案:错正确答案:错
+4.2分
+AI讲解
+21. (判断题)在SpringMVC应用程序中所有请求都应该由DispatcherServlet进行处理。
+A. 对
+B. 错
+我的答案:对正确答案:对
+4.2分
+AI讲解
+22. (判断题)使用注解@RequestParam接受请求参数，如果处理方法的形参名称和请求参数名称不一致，则不会报400错误。
+A. 对
+B. 错
+我的答案:对正确答案:错
+0分
+AI讲解
+23. (判断题)SpringMVC应用中，数据访问层是模型（Model）的一部分
+A. 对
+B. 错
+我的答案:错正确答案:错
+4.2分
+AI讲解
+24. (判断题)SpringMVC应用中视图层（view）只能使用JSP
+A. 对
+B. 错
+我的答案:错正确答案:错
+
+1. (单选题, 5分)
+下列页面定了四则运算的表单：
+
+<form action="_____________"  method="post">
+   <input type="text" name="op1" value="${equation.op1}">
+   <select name="opr">
+       <option value="+" ${equation.opr == '+' ? 'selected' : ''}>+</option>
+       <option value="-"  ${equation.opr == '-' ? 'selected' : ''}>-</option>
+       <option value="*"  ${equation.opr == '*' ? 'selected' : ''}>*</option>
+       <option value="/"  ${equation.opr == '/' ? 'selected' : ''}>/</option>        
+   </select>    
+   <input type="text" name="op2" value="${equation.op2}">
+   <input type="submit" value="=">
+   <input type="text" name="result" value="${equation.result}" disabled>
+</form>
+
+
+该表单对应的Controller中定了响应上述表单的端点：
+
+@Controller
+@Slf4j
+@RequestMapping("/arith")
+public class ArithmeticController {
+   private CalculateService calculateService;
+   @Autowired
+   public ArithmeticController(CalculateService calculateService) {
+       this.calculateService = calculateService;
+   }
+   @GetMapping("/")
+   public String index() {
+       return "arithmetic";
+   }
+   @PostMapping("/calcu")
+   public String calcu(@ModelAttribute Equation equation) {
+       log.debug("算式: {} {} {}",equation.getOp1(),equation.getOpr(),equation.getOp2());
+       calculateService.calculate(equation);
+       return "arithmetic";
+   }
+}
+
+
+如果程序的context-path为math，则表单actio属性处应该填写
+
+A. /math/arith
+B. /arith/calcu
+C. /math/calcu
+D. /math/arith/calcu
+我的答案:D:/math/arith/calcu;正确答案:D:/math/arith/calcu;
+5分
+AI讲解
+2. (单选题, 5分)
+Spring MVC程序的配置类中有如下配置：
+
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages ={"controller","service"})
+public class SpringMVCConfig implements WebMvcConfigurer {
+   @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+           registry.addResourceHandler("/image/").addResourceLocations("/img/");          
+           registry.addResourceHandler("/css/").addResourceLocations("/css/");
+           registry.addResourceHandler("/js/").addResourceLocations("/js/");
+    }
+}
+如果程序的context-path为test，在img目录下有rose.jpg图片，为确保能获取该图片，则页面的img元素该如何编写(该页面的实际的访问路径未知)：
+
+<img src="___________" >
+
+A. image/rose.jpg
+B. img/rose.jpg
+C. /test/img/rose.jpg
+D. /test/image/rose.jpg
+E. /image/rose.jpg
+F. /img/rose.jpg
+我的答案:D:/test/image/rose.jpg;正确答案:D:/test/image/rose.jpg;
+5分
+AI讲解
+3. (单选题, 5分)关于@Autowired注解实现依赖注入的说法错误的是
+A. @Autowired可以标注在需要注入的属性上
+B. @Autowired可以标注在需要注入对象的getter方法上
+C. @Autowired可以标注在用于初始化注入对象的构造方法上
+D. @Autowired可以标注在需要注入对象的setter方法上
+我的答案:B:@Autowired可以标注在需要注入对象的getter方法上;正确答案:B:@Autowired可以标注在需要注入对象的getter方法上;
+5分
+AI讲解
+4. (单选题, 5分)
+访问arithmetic页面的端点定义在下面代码中：
+
+@Controller
+@RequestMapping("/arith")
+public class ArithmeticController {
+   private CalculateService calculateService;
+   @Autowired
+   public ArithmeticController(CalculateService calculateService) {
+       this.calculateService = calculateService;
+   }
+   @GetMapping("/")
+   public String index() {
+       return "arithmetic";
+   }
+}
+
+
+项目的context-path为math，端口为8080，则访问arithmetic页面的URL为：
+
+A. http://xxxxxxxx:8080/arith/math
+B. http://xxxxxxxx:8080/arith/
+C. http://xxxxxxxx:8080/math/arith/
+D. http://xxxxxxxx:8080/math/arith
+我的答案:C:http://xxxxxxxx:8080/math/arith/;正确答案:C:http://xxxxxxxx:8080/math/arith/;
+5分
+AI讲解
+5. (单选题, 5分)
+接受表单请求的Controller方法如下：
+
+@PostMapping("/calcu")
+public String calcu(@ModelAttribute Equation equation) {
+   log.debug("算式: {} {} {}",equation.getOp1(),equation.getOpr(),equation.getOp2());
+   calculateService.calculate(equation);
+   return "arithmetic";
+}
+
+
+以下说法正确的是：
+
+A. 此处@ModelAttribute的作用是确保执行指定的方法
+B. 此处@ModelAttribute的作用可有可无
+C. @ModelAttribute的作用是确保形参equation能接受到参数，如果equation的属性名与请求名不一致，会报400错误
+D.
+@ModelAttribute的作用是将形参暴露为模型，保存在model中，供arithmetic组件使用
+
+
+
+我的答案:D:@ModelAttribute的作用是将形参暴露为模型，保存在model中，供arithmetic组件使用 ;正确答案:D:@ModelAttribute的作用是将形参暴露为模型，保存在model中，供arithmetic组件使用 ;
+5分
+AI讲解
+二. 判断题（共3题，15分）
+6. (判断题, 5分)SpringMVC控制器处理方法中的return语句默认实现的重定向到视图。
+A. 对
+B. 错
+我的答案:错正确答案:错
+5分
+知识点：
+SpringMVC
+AI讲解
+7. (判断题, 5分)重定向和转发一样，只存在一组request/response对象
+A. 对
+B. 错
+我的答案:错正确答案:错
+5分
+AI讲解
+8. (判断题, 5分)如果一个请求需要由多个组件完成处理，则组件之间应该采用重定向跳转。
+A. 对
+B. 错
+我的答案:错正确答案:错
+5分
+AI讲解
+三. 填空题（共2题，10分）
+9. (填空题, 5分)在SpringMVC应用中，如果使用注解声明的控制器类和业务逻辑类分别在包controller、service中，则Java配置类中@ComponentScan的写法是：@ComponentScan(                         )。注意填写时不要留空格，注意大小写、中英文标点符号。
+我的答案：
+5分
+(1) basePackages={"controller","service"}
+ 
+正确答案：
+(1) {"controller","service"};basePackages={"controller","service"}
+知识点：
+SpringMVC
+AI讲解
+10. (填空题, 5分)应用程序中需要直接访问静态资源，其配置类需要实现__________接口，并实现其________方法(只填方法名称)，在该方法中配置静态资源。
+我的答案：
+5分
+(1) WebMvcConfigurer
+ 
+(2) addResourceHandler
+ 
+正确答案：
+(1) WebMvcConfigurer
+(2) addResourceHandler
+
+一. 单选题（共1题，6.6分）
+1. (单选题)Spring Boot的应用程序一般打包为
+A. .jar
+B. .war
+我的答案:A:.jar;正确答案:A:.jar;
+6.6分
+AI讲解
+二. 多选题（共3题，19.8分）
+2. (多选题)如果想改变SpringBoot的默认配置，可选的、合适的途径有
+A. 在全局配置文件中修改默认属性
+B. 重新定义或声明某些默认的Bean
+C. 创建和声明自定义的Bean
+D. 修改SpringBoot 源代码后重新编译构建
+我的答案:AB:在全局配置文件中修改默认属性; 重新定义或声明某些默认的Bean;正确答案:AB:在全局配置文件中修改默认属性; 重新定义或声明某些默认的Bean;
+6.6分
+知识点：
+SprintBoot
+AI讲解
+3. (多选题)以下哪些注解或对象可以读取全局配置文件application.properties的信息
+A. Environment 对象
+B. @ConfigurationProperties
+C. @PropertySource
+D. @Value
+我的答案:ABD:Environment 对象; @ConfigurationProperties; @Value;正确答案:ABD:Environment 对象; @ConfigurationProperties; @Value;
+6.6分
+AI讲解
+4. (多选题)可以作为springboot应用程序全局配置文件的有
+A. application.yml
+B. application.config
+C. application.yaml
+D. application.properties
+我的答案:ACD:application.yml; application.yaml; application.properties;正确答案:ACD:application.yml; application.yaml; application.properties;
+6.6分
+知识点：
+SprintBoot
+AI讲解
+三. 填空题（共4题，26.7分）
+5. (填空题)
+在配置文件中有如下信息：
+
+msg=hello world!
+
+并且必要的配置已经完成，欲将此信息注入到下列的类的属性中，请填上相应的代码：
+
+@Controller
+
+public class TestController{
+
+    _________________
+
+    private String message;
+
+   .....................
+
+}
+
+注意大小写，不要有空格
+
+我的答案：
+6.6分
+(1) @Value("${msg}")
+ 
+正确答案：
+(1) @Value("${msg}")
+知识点：
+SprintBoot
+AI讲解
+6. (填空题)SpringBoot的哪个注解开启了自动配置功能
+我的答案：
+6.7分
+(1) @EnableAutoConfiguration
+ 
+正确答案：
+(1) @EnableAutoConfiguration
+知识点：
+SprintBoot
+AI讲解
+7. (填空题)SpringBoot的全局配置文件放置在SpringBoot项目的____________目录或类路径的下
+我的答案：
+6.7分
+(1) src/main/resources 
+正确答案：
+(1) src/main/resources
+知识点：
+SprintBoot
+AI讲解
+8. (填空题)SpringBoot的核心注解@SpringBootApplication是那三个注解的组合？(注意拼写)
+我的答案：
+6.7分
+(1) @SpringBootConfiguration
+ 
+(2) @EnableAutoConfiguration 
+(3) @ComponentScan 
+正确答案：
+(1) @SpringBootConfiguration
+(2) @EnableAutoConfiguration
+(3) @ComponentScan
+答案解析：
+知识点：
+SprintBoot
+AI讲解
+四. 判断题（共7题，46.9分）
+9. (判断题)SpringBoot应用程序，需要自己单独配置Web容器。
+A. 对
+B. 错
+我的答案:错正确答案:错
+6.7分
+知识点：
+SprintBoot
+AI讲解
+10. (判断题)SpringBoot的全局配置文件只能修改项目的默认配置，不能添加项目特有的配置。
+A. 对
+B. 错
+我的答案:错正确答案:错
+6.7分
+知识点：
+SprintBoot
+AI讲解
+11. (判断题)application.properties和application.yml不能共存。
+A. 对
+B. 错
+我的答案:错正确答案:错
+6.7分
+知识点：
+SpringData
+AI讲解
+12. (判断题)Spring Boot应用程序应该需要配置Tomcat等容器。
+A. 对
+B. 错
+我的答案:错正确答案:错
+6.7分
+AI讲解
+13. (判断题)Spring Boot应用程序是从main方法开始运行的。
+A. 对
+B. 错
+我的答案:对正确答案:对
+6.7分
+AI讲解
+14. (判断题)SpringBoot使用MAVEN等构件工具构件应用程序。
+A. 对
+B. 错
+我的答案:对正确答案:对
+6.7分
+知识点：
+SprintBoot
+AI讲解
+15. (判断题)SpringBoot是完全不同于Spring框架的全新框架。
+A. 对
+B. 错
+我的答案:错正确答案:错
+
+一. 单选题（共7题，20.3分）
+1. (单选题)小明的SpringMVC应用的包com.example.demo下创建了该应用的Java配置类，以下哪个组合是正确的
+A.
+Java配置类中的扫描注解为：@ComponentScan("com.example.demo.controller")
+
+控制器类所在包为controller
+
+B.
+Java配置类中的扫描注解为：@ComponentScan("controller")
+
+控制器类所在包为com.example.demo.controller
+
+C.
+Java配置类中的扫描注解为：@ComponentScan
+
+控制器类所在包为controller
+
+D.
+Java配置类中的扫描注解为：@ComponentScan
+
+控制器类所在包为com.example.demo.controller
+
+我的答案:A:Java配置类中的扫描注解为：@ComponentScan("com.example.demo.controller") 控制器类所在包为controller;正确答案:D:Java配置类中的扫描注解为：@ComponentScan 控制器类所在包为com.example.demo.controller;
+0分
+答案解析：
+知识点：
+SpringMVC
+AI讲解
+2. (单选题)SpringBoot应用中，如果@SpringBootApplication注解的入口类放置在项目的com.example.hello包下，则其他的配置类和用注解声明的bean类应该放在
+A. 可以放在com.example包下
+B. 放在com.example.hello包及其子包下
+C. 只能放在com.example.hello包下
+D. 可以放在任意包下
+我的答案:B:放在com.example.hello包及其子包下;正确答案:B:放在com.example.hello包及其子包下;
+2.9分
+知识点：
+SprintBoot
+AI讲解
+3. (单选题)作为控制器方法参数的Model对象model，其存在的生命周期是
+A. application
+B. page
+C. request
+D. session
+我的答案:C:request;正确答案:C:request;
+2.9分
+知识点：
+SpringMVC
+AI讲解
+4. (单选题)SpringMVC的核心控制器是
+A. Filter
+B. JSP
+C. Servlet
+D. Listener
+我的答案:C:Servlet;正确答案:C:Servlet;
+2.9分
+知识点：
+SpringMVC
+AI讲解
+5. (单选题)Spring Boot的应用程序一般打包为
+A. .jar
+B. .war
+我的答案:A:.jar;正确答案:A:.jar;
+2.9分
+AI讲解
+6. (单选题)
+有如下控制器类
+
+@RequestMapping("/user")
+
+public class TestController(){
+
+    @RequestMapping("/findByName")
+
+    public String addUser(User user, Model){ .....}
+
+}
+
+如果该应用的上下文路径（context-path）为/myoa，则下列哪个请求会执行addUser方法
+
+A. http://localhost:8080/myoa/user/findByName
+B. http://localhost:8080/user/findByName
+C. http://localhost:8080/myoa/user/
+D. http://localhost:8080/myoa/findByName
+我的答案:A:http://localhost:8080/myoa/user/findByName;正确答案:A:http://localhost:8080/myoa/user/findByName;
+2.9分
+答案解析：
+知识点：
+SpringMVC
+AI讲解
+7. (单选题)Thymeleaf的动态模板功能通常是放置在HTML标签的___________上实现的。
+A. 标签内容
+B. 使用动态标签库
+C. 属性
+D. 标签名
+我的答案:C:属性;正确答案:C:属性;
+2.9分
+AI讲解
+二. 判断题（共9题，26.1分）
+8. (判断题)SpringBoot使用MAVEN等构件工具构件应用程序。
+A. 对
+B. 错
+我的答案:对正确答案:对
+2.9分
+知识点：
+SprintBoot
+AI讲解
+9. (判断题)控制器如果使用实体bean接受请求参数，则bean的属性名称必须和请求参数名称相同。
+A. 对
+B. 错
+我的答案:对正确答案:对
+2.9分
+知识点：
+SpringMVC
+AI讲解
+10. (判断题)Spring Boot应用程序是从main方法开始运行的。
+A. 对
+B. 错
+我的答案:对正确答案:对
+2.9分
+AI讲解
+11. (判断题)Spring Boot应用程序应该需要配置Tomcat等容器。
+A. 对
+B. 错
+我的答案:错正确答案:错
+2.9分
+AI讲解
+12. (判断题)使用注解@RequestParam接受请求参数，如果处理方法的形参名称和请求参数名称不一致，则不会报400错误。
+A. 对
+B. 错
+我的答案:错正确答案:错
+2.9分
+知识点：
+SpringMVC
+AI讲解
+13. (判断题)SpringBoot是完全不同于Spring框架的全新框架。
+A. 对
+B. 错
+我的答案:错正确答案:错
+2.9分
+知识点：
+SprintBoot
+AI讲解
+14. (判断题)SpringBoot的全局配置文件只能修改项目的默认配置，不能添加项目特有的配置。
+A. 对
+B. 错
+我的答案:错正确答案:错
+2.9分
+知识点：
+SprintBoot
+AI讲解
+15. (判断题)在SpringMVC应用程序中所有请求都应该由DispatcherServlet进行处理。
+A. 对
+B. 错
+我的答案:对正确答案:对
+2.9分
+知识点：
+SpringMVC
+AI讲解
+16. (判断题)有表单<form th:action="@{/login}" th:object="${user}">...</form>，这里的user对象不必一定存在。
+A. 对
+B. 错
+我的答案:错正确答案:错
+2.9分
+AI讲解
+三. 填空题（共14题，41.6分）
+17. (填空题)在SpringMVC应用中，如果使用注解声明的控制器类和业务逻辑类分别在包controller、service中，则Java配置类中@ComponentScan的写法是：@ComponentScan(                         )。注意填写时不要留空格，注意大小写、中英文标点符号。
+我的答案：
+0分
+(1) @ComponentScan({"controller","service"}) 
+正确答案：
+(1) {"controller","service"};basePackages={"controller","service"}
+知识点：
+SpringMVC
+AI讲解
+18. (填空题)如果变量msg在上下文（model）或request中，则取值表达式为${________}；若msg为请求参数，则取值表达式为${________}；若msg为session对象中的变量，则取值表达式为${________}；
+我的答案：
+2.9分
+(1) msg 
+(2) param.msg 
+(3) session.msg 
+正确答案：
+(1) msg
+(2) param.msg
+(3) session.msg
+AI讲解
+19. (填空题)有代码<div th:each="book,bookStat: ${books}>....</div>，books对象应该是一个_______对象，如果bookStat的count属性值在迭代时的最大值5，则books对象有______个元素。
+我的答案：
+1.4分
+(1) 集合 
+(2) 5 
+正确答案：
+(1) 数组;list;列表;可迭代;iterable;List;Map;map;set;Set
+(2) 5
+AI讲解
+20. (填空题)
+有表单<form th:action="@{/login}" th:object="${user}">
+
+<input type="text" value="" th:field="_____________></input>  <!-- 与user对象的userName属性绑定-->
+
+<input type="text" value="" th:field="_____________></input>  <!-- 与user对象的role属性绑定-->
+
+</form>
+
+我的答案：
+2.9分
+(1) *{userName} 
+(2) *{role} 
+正确答案：
+(1) *{userName}
+(2) *{role}
+AI讲解
+21. (填空题)SpringMVC中，使用____________注解用于声明该类的实例是一个控制器
+我的答案：
+3分
+(1) @Controller 
+正确答案：
+(1) @Controller
+知识点：
+SpringMVC
+AI讲解
+22. (填空题)在页面上引入Thymeleaf，需要在<html>添加属性________________________。（填写完整的属性名及其值）
+我的答案：
+3分
+(1) xmlns:th="http://www.thymeleaf.org" 
+正确答案：
+(1)
+xmlns:th="http://www.thymeleaf.org"
+
+
+AI讲解
+23. (填空题)
+在配置文件中有如下信息：
+
+msg=hello world!
+
+并且必要的配置已经完成，欲将此信息注入到下列的类的属性中，请填上相应的代码：
+
+@Controller
+
+public class TestController{
+
+    _________________
+
+    private String message;
+
+   .....................
+
+}
+
+注意大小写，不要有空格
+
+我的答案：
+3分
+(1) @Value("${msg}") 
+正确答案：
+(1) @Value("${msg}")
+知识点：
+SprintBoot
+AI讲解
+24. (填空题)SpringBoot的哪个注解开启了自动配置功能
+我的答案：
+0分
+(1) @SpringBootApplication 
+正确答案：
+(1) @EnableAutoConfiguration
+知识点：
+SprintBoot
+AI讲解
+25. (填空题)SpringBoot的全局配置文件放置在SpringBoot项目的____________目录或类路径的/config下
+我的答案：
+3分
+(1) src/main/resources 
+正确答案：
+(1) src/main/resources
+知识点：
+SprintBoot
+AI讲解
+26. (填空题)在Thymeleaf当前页面的model对象中，存在一个名为msg的字符串变量，如要将此变量的值显示在p标签中，请填空。<p _________></p>
+我的答案：
+3分
+(1) th:text="${msg}" 
+正确答案：
+(1) th:text=${msg}
+AI讲解
+27. (填空题)如果session中存在user对象，则显示“退出”的超链接，其超链接指向logout请求，请填空
+<a th:href="________" th:if="__________">退出</a>
+
+我的答案：
+3分
+(1) @{/logout} 
+(2) ${session.user != null} 
+正确答案：
+(1) @{/logout}
+(2) ${session.user!=null}
+AI讲解
+28. (填空题)SpringBoot的核心注解@SpringBootApplication是那三个注解的组合？(注意拼写)
+我的答案：
+3分
+(1) @SpringBootConfiguration 
+(2) @EnableAutoConfiguration 
+(3) @ComponentScan 
+正确答案：
+(1) @SpringBootConfiguration
+(2) @EnableAutoConfiguration
+(3) @ComponentScan
+答案解析：
+知识点：
+SprintBoot
+AI讲解
+29. (填空题)SpringBoot进行自动配置的信息来自于classpath中所有jar包中的META-INF/_________文件。
+我的答案：
+3分
+(1) spring.factories 
+正确答案：
+(1) spring.factories
+知识点：
+SprintBoot
+AI讲解
+30. (填空题)
+有如下控制器方法，想让参数book暴露为模型数据，且其名称为bookInfo，请填上相应的内容：
+
+@RequestMapping("/add")
+
+public String addBook(___________ Book book){.........}
+
+我的答案：
+3分
+(1) @ModelAttribute("bookInfo") 
+正确答案：
+(1) @ModelAttribute("bookInfo")
+答案解析：
+知识点：
+SpringMVC
+AI讲解
+四. 多选题（共4题，12分）
+31. (多选题)
+想让参数book暴露为模型数据，且其名称为bookInfo，则以下控制器方法正确的有，
+
+A.
+@RequestMapping("/add")
+
+public String addBook(@ModelAttribute("bookinfo") Book book){.........}
+
+
+
+B.
+@RequestMapping("/add")
+
+public String addBook(Book book, Model model){
+
+    ........
+
+    model.addAttribute("bookInfo", book)
+
+   ........
+
+}
+
+
+
+C.
+@RequestMapping("/add")
+
+public String addBook(Book book){.........}
+
+
+
+D.
+@RequestMapping("/add")
+
+public String addBook(@ModelAttribute Book book){.........}
+
+
+
+我的答案:AB:@RequestMapping("/add") public String addBook(@ModelAttribute("bookinfo") Book book){.........} ; @RequestMapping("/add") public String addBook(Book book, Model model){ ........ model.addAttribute("bookInfo", book) ........ } ;正确答案:AB:@RequestMapping("/add") public String addBook(@ModelAttribute("bookinfo") Book book){.........} ; @RequestMapping("/add") public String addBook(Book book, Model model){ ........ model.addAttribute("bookInfo", book) ........ } ;
+3分
+答案解析：
+知识点：
+SpringMVC
+AI讲解
+32. (多选题)可以作为springboot应用程序全局配置文件的有
+A. application.yml
+B. application.config
+C. application.properties
+D. application.yaml
+我的答案:ACD:application.yml; application.properties; application.yaml;正确答案:ACD:application.yml; application.properties; application.yaml;
+3分
+知识点：
+SprintBoot
+AI讲解
+33. (多选题)有表单<form th:action="@{/login}">...</form>，当前项目上下文路径(context-path)为myoa，则转换成html后，action的属性值应该是哪一个。（至少选一项）
+A. /myoa/login
+B. /login
+C. login
+D. myoa/login
+我的答案:A:/myoa/login;正确答案:A:/myoa/login;
+3分
+AI讲解
+34. (多选题)SpringMVC中属于控制器的有
+A. JSP、HTML
+B. HandlerMapping
+C. DispatcherServlet
+D. 各个Controller
+我的答案:CD:DispatcherServlet; 各个Controller;正确答案:BCD:HandlerMapping; DispatcherServlet; 各个Controller;
+
+一. 多选题（共4题，20.8分）
+1. (多选题)关于SpringMVC文件上传，说法正确的是
+A. 需要在SpringMVC应用的配置中配置MultipartResolver
+B. 传页面表单中的enctype属性必须为multipart/form-data
+C. 上传页面表单中的method属性必须为post
+D. 控制器方法参数中需有一个类型为MultipartFile的参数
+我的答案:ABCD:需要在SpringMVC应用的配置中配置MultipartResolver; 传页面表单中的enctype属性必须为multipart/form-data; 上传页面表单中的method属性必须为post; 控制器方法参数中需有一个类型为MultipartFile的参数;正确答案:ABCD:需要在SpringMVC应用的配置中配置MultipartResolver; 传页面表单中的enctype属性必须为multipart/form-data; 上传页面表单中的method属性必须为post; 控制器方法参数中需有一个类型为MultipartFile的参数;
+5.2分
+AI讲解
+2. (多选题)以下哪些是正确的JSON对象
+A. ["足球","篮球","排球"]
+B.
+{
+
+"name":"jack",
+
+ "hobbys":["旅游","美食","电游"],
+
+ "pet": {"type":"dog", "name":"wangwang"}
+
+}
+
+C. ["张三",  {"name":"李四", "age":20}, ["王五", "马六"]]
+D. {"tname":"张三", "tid":1001}
+我的答案:BCD:{ "name":"jack", "hobbys":["旅游","美食","电游"], "pet": {"type":"dog", "name":"wangwang"} }; ["张三", {"name":"李四", "age":20}, ["王五", "马六"]]; {"tname":"张三", "tid":1001};正确答案:ABCD:["足球","篮球","排球"]; { "name":"jack", "hobbys":["旅游","美食","电游"], "pet": {"type":"dog", "name":"wangwang"} }; ["张三", {"name":"李四", "age":20}, ["王五", "马六"]]; {"tname":"张三", "tid":1001};
+2.6分
+答案解析：
+AI讲解
+3. (多选题)@RestController相当于哪几个注解的组合
+A. @RequestBody
+B. @Service
+C. @Controller
+D. @ResponseBody
+我的答案:CD:@Controller; @ResponseBody;正确答案:CD:@Controller; @ResponseBody;
+5.2分
+AI讲解
+4. (多选题)JSON数据结构中值（value）的数据类型可以是
+A. Object
+B. true/false
+C. Number
+D. Array
+E. String
+我的答案:ABCDE:Object; true/false; Number; Array; String;正确答案:ABCDE:Object; true/false; Number; Array; String;
+5.2分
+AI讲解
+二. 判断题（共6题，31.5分）
+5. (判断题)JSON的对象结构中，其key的数据类型必须为String
+A. 对
+B. 错
+我的答案:对正确答案:对
+5.2分
+AI讲解
+6. (判断题)JSON的两种数据结构可以嵌套或组合，构成更为复杂的结构
+A. 对
+B. 错
+我的答案:对正确答案:对
+5.2分
+AI讲解
+7. (判断题)SpringMVC实现浏览器和控制器处理方法间的JSON数据交互时，同时使用了@RequestBody和@ResponseBody注解，则处理器方法的return语句中返回的应该是一个Java对象。
+A. 对
+B. 错
+我的答案:对正确答案:对
+5.2分
+AI讲解
+8. (判断题)SpringMVC实现浏览器和控制器处理方法间的JSON数据交互时，注解@RequestBody使用在处理方法上。
+A. 对
+B. 错
+我的答案:错正确答案:错
+5.3分
+AI讲解
+9. (判断题)SpringMVC实现浏览器和控制器处理方法间的JSON数据交互时，使用了@ResponseBody注解，则处理方法返回的是视图。
+A. 对
+B. 错
+我的答案:错正确答案:错
+5.3分
+AI讲解
+10. (判断题)JSON是基于纯文本的数据格式
+A. 对
+B. 错
+我的答案:对正确答案:对
+5.3分
+AI讲解
+三. 填空题（共6题，31.8分）
+11. (填空题)org.springframework.web.multipart.MultipartFile类的_________方法将接收的文件传输到目标文件中。
+我的答案：
+5.3分
+(1) transferTo 
+正确答案：
+(1) transferTo
+AI讲解
+12. (填空题)在浏览器发送的请求数据为JSON时，其http header中的contentType属性值需为
+我的答案：
+5.3分
+(1) application/json 
+正确答案：
+(1) application/json\;charset=utf-8;application/json
+AI讲解
+13. (填空题)Spring MVC文件上传，需要在配置类或xml配置文件中配置_____________________，用于设定上传文件的大小、编码格式等等
+我的答案：
+5.3分
+(1) MultipartResolver 
+正确答案：
+(1) MultipartResolver
+AI讲解
+14. (填空题)从Spring6.0开始，SpringMVC文件上传是基于Servlet容器的___________接口的实现类_____________进行multipart请求解析，从而实现文件上传。
+我的答案：
+2.6分
+(1) jakarta.servlet 
+(2) StandardServletMultipartResolver 
+正确答案：
+(1) MultipartResolver;commons-fileupload;Apache Commons FileUpload
+(2) StandardServletMultipartResolver
+AI讲解
+15. (填空题)文件上传，页面表单的method属性值必须为_________, enctype属性值需为__________________________
+我的答案：
+5.3分
+(1) post 
+(2) multipart/form-data 
+正确答案：
+(1) post;POST
+(2) multipart/form-data
+AI讲解
+16. (填空题)JSON有两种数据结构，分别是___________结构和___________结构
+我的答案：
+5.3分
+(1) 对象 
+(2) 数组 
+正确答案：
+(1) 对象
+(2) 数组
+AI讲解
+四. 单选题（共3题，15.9分）
+17. (单选题)文件下载前需要对文件名进行编码，比如保存文件名的变量为filename，需要filename=URLEncoder.encode(filename,"UTF-8")转换为才能确保文件能正常下载，其理由是：
+A. 确保文件路径正确
+B. 需要对文件名进行加密
+C. 原文件名的编码不是UTF-8，需要转换为UTF-8编码格式
+D. 文件名中可能包含空格等不能在URL出现的字符，需要对这些字符进行转码（编码）以符合URL的规则要求
+我的答案:D:文件名中可能包含空格等不能在URL出现的字符，需要对这些字符进行转码（编码）以符合URL的规则要求;正确答案:D:文件名中可能包含空格等不能在URL出现的字符，需要对这些字符进行转码（编码）以符合URL的规则要求;
+5.3分
+AI讲解
+18. (单选题)在文件下载时，响应头（header）的Content-Type属性应该是
+A. application/octet-stream
+B. application/xhtml+xml
+C. application/json
+D. text/html
+E. application/stream+json
+我的答案:A:application/octet-stream;正确答案:A:application/octet-stream;
+5.3分
+AI讲解
+19. (单选题)文件下载时，需要设置响应的实体头（header）的哪个属性，用于控制文件下载的行为
+A. Content-Disposition
+B. Content-Encoding
+C. Content-Type
+D. Content-Length
+我的答案:A:Content-Disposition;正确答案:A:Content-Disposition;
+
+一. 填空题（共7题，40分）
+1. (填空题, 4分)在MyBatis集成在Spring Boot中时，如果想指定SQL映射文件的位置，则可以在全局配置文件中设置_______________配置项，以指定映射文件位置
+我的答案：
+4分
+(1) mybatis.mapper-locations 
+正确答案：
+(1) mybatis.mapperLocations
+AI讲解
+2. (填空题, 5分)
+使用mybaits-spring整合MyBatis与Spring时，在Spring的Java配置类上使用哪个注解用于扫描映射器接口？
+
+或者Mybatis集成在SpringBoot中是，在启动类上使用哪个注解用于扫描映射器接口？
+
+我的答案：
+5分
+(1) @MapperScan 
+正确答案：
+(1) @MapperScan;MapperScan
+AI讲解
+3. (填空题, 6分)
+在MyBatis的配置文件中有如下配置：
+
+<typeAliases>  
+
+    <package name="com.entity"/> 
+
+</typeAliases>  
+
+
+
+或者MyBatis在SpringBoot的配置文件application.properties中有如下配置：
+
+mybatis.type-aliases-package=com.entity
+
+
+
+在实体类com.entity.Product类中，没有使用注解进行别名命名，则默认的别名是______(填写时不要加引号)。
+
+在ProductMapper.xml中某SQL元素的属性resultType=“MyProduct”，则在Product类中使用注解_________进行别命名命名。（填写时注意大小写，不要留任何空格）
+
+我的答案：
+6分
+(1) product 
+(2) @Alias("MyProduct")
+ 
+正确答案：
+(1) product
+(2) @Alias("MyProduct")
+AI讲解
+4. (填空题, 4分)如果使用的数据库支持主键自动增长，那么可以通过【】属性指定POJO类的某个属性接收主键返回值。
+我的答案：
+0分
+(1) useGeneratedKeys 
+正确答案：
+(1) keyProperty
+知识点：
+MyBatis
+AI讲解
+5. (填空题, 4分)使用mybaits-spring整合MyBatis与Spring时，或MyBatis集成在SpringBoot中时，在映射器接口上使用哪个注解标注该接口是一个映射器接口。
+我的答案：
+4分
+(1) @Mapper 
+正确答案：
+(1) @Mapper
+AI讲解
+6. (填空题, 8分)
+有如下MyBatis的数据库接口和相应的Mapper映射文件，请在各空格上填上合适的内容
+
+数据库接口：
+
+package com.example.dao
+
+
+
+public interface BookDao{
+
+        List<Book> findBookByTitle(String title);
+
+}
+
+
+
+映射文件：
+
+<mapper namespace="   (1)     ">
+
+    <select id="  (2)    " ...>
+
+        ......
+
+  </select>
+
+</mapper>
+
+
+
+我的答案：
+8分
+(1) com.example.dao.BookDao 
+(2) findBookByTitle 
+正确答案：
+(1)  com.example.dao.BookDao
+(2) findBookByTitle
+AI讲解
+7. (填空题, 9分)
+有一个名为person的表，其字段的名称名为：pid(主键)，p_name(姓名)，p_age(年龄）。需要映射的实体类Person的属性有pid，name，age。请填写下面的resultMap的三项：
+
+<reslutMap id="pmap" type="Person">
+
+                (1)              // 主键对应项
+
+                (2)              // 姓名对应项
+
+                (3)              // 年龄对应项
+
+</reslutMap>
+
+填写时注意，有间隔的请只留一个空格，只写必要的两项属性，先property再column。
+
+我的答案：
+9分
+(1) <id property="pid" column="pid"/> 
+(2) <result property="name" column="p_name"/> 
+(3) <result property="age" column="p_age"/> 
+正确答案：
+(1)
+<id property="pid" column="pid"/>;<id column="pid" property="pid"/>;<id column="pid" property="pid"></id>;<id property="pid" column="pid"></id>
+
+(2)
+<result property="name" column="p_name"/>;<result column="p_name" property="name"/>;<result property="name" column="p_name"></result>;<result column="p_name" property="name"></result>
+
+(3) <result property="age" column="p_age"/>;<result column="p_age" property="age"/>;<result property="age" column="p_age"></result>;<result column="p_age" property="age"></result>
+AI讲解
+二. 判断题（共13题，26分）
+8. (判断题, 2分)可以使用Map类型封装查询结果集
+A. 对
+B. 错
+我的答案:对正确答案:对
+2分
+AI讲解
+9. (判断题, 2分)MyBatis映射文件中<mappers>元素是配置文件的根元素，它包含一个namespace属性，该属性为这个<mappers>指定了唯一的命名空间。
+A. 对
+B. 错
+我的答案:错正确答案:错
+2分
+知识点：
+MyBatis
+AI讲解
+10. (判断题, 2分)映射接口文件和映射SQL文件必须在同一个包路径下。
+A. 对
+B. 错
+我的答案:错正确答案:错
+2分
+AI讲解
+11. (判断题, 2分)各类SQL元素的resultType和parameterType很多时候可以忽略不写，因为可以自动推断
+A. 对
+B. 错
+我的答案:对正确答案:对
+2分
+AI讲解
+12. (判断题, 2分)动态SQL可以根据参入的参数的具体情况动态的拼接SQL语句
+A. 对
+B. 错
+我的答案:对正确答案:对
+2分
+AI讲解
+13. (判断题, 2分)
+SpringBoot全局文件中配置MyBatis的配置项mybatis.type-aliases-package的作用是给实体类取别名，其值是实体类的别名。
+
+
+
+
+
+A. 对
+B. 错
+我的答案:错正确答案:错
+2分
+知识点：
+SpringData
+AI讲解
+14. (判断题, 2分)在MyBatis中SQL注解和XML映射文件不能同时共存。
+A. 对
+B. 错
+我的答案:错正确答案:错
+2分
+AI讲解
+15. (判断题, 2分)在select元素将查询的结果集封装到resultType指定的实体类的对象中，它是无条件的，可以任意定义实体类
+A. 对
+B. 错
+我的答案:错正确答案:错
+2分
+AI讲解
+16. (判断题, 2分)如果实体类和对应的数据库表的列名不一致，唯一的解决办法就是使用ReusltMap定义类到表的映射
+A. 对
+B. 错
+我的答案:错正确答案:错
+2分
+AI讲解
+17. (判断题, 2分)可以使用Map类型作为参数传递查询条件
+A. 对
+B. 错
+我的答案:对正确答案:对
+2分
+AI讲解
+18. (判断题, 2分)使用mybaits-spring整合MyBatis与Spring时，或者MyBatis集成在SpringBoot中时，当映射器接口和SQL映射文件在同一个包路径下时，不需要再额外指定SQL映射文件的位置了。
+A. 对
+B. 错
+我的答案:对正确答案:对
+2分
+AI讲解
+19. (判断题, 2分)定好的resultMap不可以重复使用
+A. 对
+B. 错
+我的答案:错正确答案:错
+2分
+AI讲解
+20. (判断题, 2分)当表中的列名与对应对象的属性名称完全一致时，在查询映射文件中可以不使用resultMap属性。
+A. 对
+B. 错
+我的答案:对正确答案:对
+2分
+知识点：
+MyBatis
+AI讲解
+三. 多选题（共2题，10分）
+21. (多选题, 5分)MyBatis的SQL映射文件中，以下属于常见元素的是
+A. <resultMap>
+B. <select>
+C. <update>
+D. <insert>
+E. <sql>
+F. <delete>
+我的答案:ABCDEF:<resultMap>; <select>; <update>; <insert>; <sql>; <delete>;正确答案:ABCDEF:<resultMap>; <select>; <update>; <insert>; <sql>; <delete>;
+5分
+AI讲解
+22. (多选题, 5分)下列选项中，对使用MyBatis编程的好处说法正确的是（）。
+A. 自动将Java对象映射至 SQL语句。
+B. 实现了SQL与Java 代码的分离。
+C. 不用配置数据连接池，也可以高效的管理数据库连接。
+D. 自动将SQL执行结果映射至Java对象。
+我的答案:AB:自动将Java对象映射至 SQL语句。; 实现了SQL与Java 代码的分离。;正确答案:ABD:自动将Java对象映射至 SQL语句。; 实现了SQL与Java 代码的分离。; 自动将SQL执行结果映射至Java对象。;
+2.5分
+知识点：
+MyBatis
+AI讲解
+四. 单选题（共6题，24分）
+23. (单选题, 4分)下面关于映射文件中的<mapper>元素的属性，说法正确的是（）。
+A. resultType属性的值表示传入的参数类型
+B. 以上说法都不正确
+C. parameterType属性的值表示的是返回的实体类对象
+D. namespace属性的值通常设置为对应实体类的全限定类名
+我的答案:B:以上说法都不正确;正确答案:D:namespace属性的值通常设置为对应实体类的全限定类名;
+0分
+知识点：
+AI讲解
+24. (单选题, 4分)以下关于<select>元素及其属性说法错误的是（）。
+A. resultMap表示外部resultMap的命名引用，返回时可以同时使用resultType和resultMap
+B. 在同一个映射文件中可以配置多个<select>元素
+C. <select>元素用来映射查询语句，它可以帮助我们从数据库中读取出数据，并组装数据给业务开发人员
+D. parameterType属性表示传入SQL语句的参数类的全限定名或者别名
+我的答案:A:resultMap表示外部resultMap的命名引用，返回时可以同时使用resultType和resultMap;正确答案:A:resultMap表示外部resultMap的命名引用，返回时可以同时使用resultType和resultMap;
+4分
+知识点：
+MyBatis
+AI讲解
+25. (单选题, 4分)下列关于<mapper>元素的说法正确的是（）。
+A. <mapper>元素不是映射文件的根元素
+B. <mapper>元素是映射文件的根元素
+C. <mapper>元素的namespace属性是不唯一的
+D. <mapper>元素的namespace属性值的命名不一定跟接口同名
+我的答案:B:<mapper>元素是映射文件的根元素;正确答案:B:<mapper>元素是映射文件的根元素;
+4分
+知识点：
+AI讲解
+26. (单选题, 4分)以下有关MyBatis映射文件中<insert>元素说法正确的是（）。
+A. <insert>元素的属性与<select>元素的属性相同
+B. <insert>元素用于映射插入语句，在执行完元素中定义的SQL语句后，没有返回结果
+C. keyColumn属性用于设置第几列是主键，当主键列不是表中的第一列时需要设置
+D. useGeneratedKeys（仅对insert有用）此属性会使MyBatis使用JDBC的getGeneratedKeys()方法来获取由数据库内部生产的主键
+我的答案:D:useGeneratedKeys（仅对insert有用）此属性会使MyBatis使用JDBC的getGeneratedKeys()方法来获取由数据库内部生产的主键;正确答案:C:keyColumn属性用于设置第几列是主键，当主键列不是表中的第一列时需要设置;
+0分
+知识点：
+AI讲解
+27. (单选题, 4分)下列关于MyBatis中默认的常见Java类型的别名，正确的是（）。
+A. 映射类型为Byte，则别名为Byte
+B. 映射类型为Date，则别名为Date
+C. 映射类型为byte，则别名为Byte
+D. 映射类型为String，则别名为string
+我的答案:D:映射类型为String，则别名为string;正确答案:D:映射类型为String，则别名为string;
+4分
+知识点：
+MyBatis
+AI讲解
+28. (单选题, 4分)下面关于MyBatis提供的用于解决JDBC编程劣势的方案，说法错误的是（）。
+A. 在SqlMapConfig.xml中配置数据链接池，使用连接池管理数据库链接
+B. MyBatis自动将Java对象映射至SQL语句，通过Statement中的parameterType定义输入参数的类型
+C. MyBatis将SQL语句配置在MyBatis的映射文件中，未与Java代码的分离
+D. MyBatis自动将SQL执行结果映射至Java对象，通过Statement中的resultType定义输出结果的类型
+我的答案:D:MyBatis自动将SQL执行结果映射至Java对象，通过Statement中的resultType定义输出结果的类型;正确答案:C:MyBatis将SQL语句配置在MyBatis的映射文件中，未与Java代码的分离;

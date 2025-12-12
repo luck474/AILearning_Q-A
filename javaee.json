@@ -1,0 +1,1222 @@
+[
+  {
+    "id": 1,
+    "question": "Spring是一个轻量级的Java开发框架",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 2,
+    "question": "注入bean的注解中，默认按照Bean类型进行装备的注解是@Resource",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 3,
+    "question": "Spring框架实例化Bean最常用的方法是构造方法实例化。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 4,
+    "question": "Spring的核心容器包含的模块有",
+    "type": "multiple_response",
+    "options": [
+      "A. Spring-context",
+      "B. Spring-expression",
+      "C. Spring-context-support",
+      "D. Spring-core",
+      "E. Spring-beans"
+    ],
+    "answer": "ABCDE",
+    "raw_answer": "ABCDE:Spring-context; Spring-expression; Spring-context-support; Spring-core; Spring-beans;"
+  },
+  {
+    "id": 5,
+    "question": "关于Spring的IOC，以下说法正确的是",
+    "type": "multiple_response",
+    "options": [
+      "A. 对象之间的关系有Spring容器进行管理控制",
+      "B. Spring容器负责将被依赖对象赋值给调用者的成员变量。",
+      "C. Spring容器负责创建对象",
+      "D. 依赖注入的目的是为解耦"
+    ],
+    "answer": "BD",
+    "raw_answer": "BD:Spring容器负责将被依赖对象赋值给调用者的成员变量。; 依赖注入的目的是为解耦;"
+  },
+  {
+    "id": 6,
+    "question": "Spring框架实例化Bean的方法有",
+    "type": "multiple_response",
+    "options": [
+      "A. 构造方法实例化",
+      "B. 静态工厂实例化",
+      "C. 实例工厂实例化",
+      "D. 初始化方法实例化"
+    ],
+    "answer": "ABC",
+    "raw_answer": "ABC:构造方法实例化; 静态工厂实例化; 实例工厂实例化;"
+  },
+  {
+    "id": 7,
+    "question": "Spring中提供IOC/DI功能的模块是",
+    "type": "multiple_choice",
+    "options": [
+      "A. Spring-context",
+      "B. Spring-expression",
+      "C. Spring-context-support",
+      "D. Spring-beans",
+      "E. Spring-core"
+    ],
+    "answer": "E",
+    "raw_answer": "E:Spring-core;"
+  },
+  {
+    "id": 8,
+    "question": "Spring中提供对象管理的模块是",
+    "type": "multiple_choice",
+    "options": [
+      "A. Spring-beans",
+      "B. Spring-expression",
+      "C. Spring-context-support",
+      "D. Spring-context",
+      "E. Spring-core"
+    ],
+    "answer": "A",
+    "raw_answer": "A:Spring-beans;"
+  },
+  {
+    "id": 9,
+    "question": "SpringMVC中寻找控制器的组件是",
+    "type": "multiple_choice",
+    "options": [
+      "A. Controller",
+      "B. HandlerMapping",
+      "C. DispatcherServlet",
+      "D. servlet-name-servlet.xml"
+    ],
+    "answer": "B",
+    "raw_answer": "B:HandlerMapping;"
+  },
+  {
+    "id": 10,
+    "question": "小明的SpringMVC应用的包com.example.demo下创建了该应用的Java配置类，以下哪个组合是正确的",
+    "type": "multiple_choice",
+    "options": [
+      "A.",
+      "B.",
+      "C.",
+      "D."
+    ],
+    "answer": "B",
+    "raw_answer": "B:Java配置类中的扫描注解为：@ComponentScan 控制器类所在包为com.example.demo.controller;"
+  },
+  {
+    "id": 11,
+    "question": "\n有如下控制器类\n@RequestMapping(\"/user\")\npublic class TestController(){\n@RequestMapping(\"/findByName\")\npublic String addUser(User user, Model){ .....}\n}\n如果该应用的上下文路径（context-path）为/myoa，则下列哪个请求会执行addUser方法",
+    "type": "multiple_choice",
+    "options": [
+      "A. http://localhost:8080/user/findByName",
+      "B. http://localhost:8080/myoa/user/",
+      "C. http://localhost:8080/myoa/user/findByName",
+      "D. http://localhost:8080/myoa/findByName"
+    ],
+    "answer": "C",
+    "raw_answer": "C:http://localhost:8080/myoa/user/findByName;"
+  },
+  {
+    "id": 12,
+    "question": "作为控制器方法参数的Model对象model，其存在的生命周期是",
+    "type": "multiple_choice",
+    "options": [
+      "A. session",
+      "B. page",
+      "C. request",
+      "D. application"
+    ],
+    "answer": "C",
+    "raw_answer": "C:request;"
+  },
+  {
+    "id": 13,
+    "question": "SpringMVC的核心控制器是",
+    "type": "multiple_choice",
+    "options": [
+      "A. Listener",
+      "B. Filter",
+      "C. Servlet",
+      "D. JSP"
+    ],
+    "answer": "C",
+    "raw_answer": "C:Servlet;"
+  },
+  {
+    "id": 14,
+    "question": "对于SpringMVC的Java配置文件，可以实现的接口是",
+    "type": "multiple_choice",
+    "options": [
+      "A. WebMvcConfigurer",
+      "B. Configuration",
+      "C. WebApplicationInitializer",
+      "D. AnnotationConfigWebApplicationContext"
+    ],
+    "answer": "A",
+    "raw_answer": "A:WebMvcConfigurer;"
+  },
+  {
+    "id": 15,
+    "question": "在SpringMVC中，负责查找View并将模型数据传给视图，从而将结果渲染给客户端的是组件是",
+    "type": "multiple_choice",
+    "options": [
+      "A. View(JSP、HTML等)",
+      "B. ModelAndView",
+      "C. Model",
+      "D. ViewResolver"
+    ],
+    "answer": "D",
+    "raw_answer": "D:ViewResolver;"
+  },
+  {
+    "id": 16,
+    "question": "SpringMVC中，对HTTP请求进行实际处理的是",
+    "type": "multiple_choice",
+    "options": [
+      "A. HandlerMapping",
+      "B. ViewResolver",
+      "C. DispatcherServlet",
+      "D. Controller"
+    ],
+    "answer": "D",
+    "raw_answer": "D:Controller;"
+  },
+  {
+    "id": 17,
+    "question": "在SpringMVC的web应用程序中 ，如果想使用Java配置文件对DispatchServlet进行配置，则可以实现的接口或继承的类有",
+    "type": "multiple_response",
+    "options": [
+      "A. WebApplicationInitializer",
+      "B. AnnotationConfigWebApplicationContext",
+      "C. WebMvcConfigurer",
+      "D. AbstractAnnotationConfigDispatcherServletInitializer"
+    ],
+    "answer": "AD",
+    "raw_answer": "AD:WebApplicationInitializer; AbstractAnnotationConfigDispatcherServletInitializer;"
+  },
+  {
+    "id": 18,
+    "question": "SpringMVC中属于控制器的有",
+    "type": "multiple_response",
+    "options": [
+      "A. 各个Controller",
+      "B. HandlerMapping",
+      "C. JSP、HTML",
+      "D. DispatcherServlet"
+    ],
+    "answer": "ABD",
+    "raw_answer": "ABD:各个Controller; HandlerMapping; DispatcherServlet;"
+  },
+  {
+    "id": 19,
+    "question": "关于SpringMVC的Java配置文件中的注解，下列描述正确的是",
+    "type": "multiple_response",
+    "options": [
+      "A. 需要使用@Bean注解配置视图解析器、格式转换器等组件。",
+      "B. 需要使用@EnableWebMvc注解开启默认配置",
+      "C. 需使用@Configuration注解声明该类为Java配置类。",
+      "D. 需要使用@ComponentScan注解扫描应用所需的各种用注解生成和注入的类"
+    ],
+    "answer": "ABCD",
+    "raw_answer": "ABCD:需要使用@Bean注解配置视图解析器、格式转换器等组件。; 需要使用@EnableWebMvc注解开启默认配置; 需使用@Configuration注解声明该类为Java配置类。; 需要使用@ComponentScan注解扫描应用所需的各种用注解生成和注入的类;"
+  },
+  {
+    "id": 20,
+    "question": "\n想让参数book暴露为模型数据，且其名称为bookInfo，则以下控制器方法正确的有，",
+    "type": "multiple_response",
+    "options": [
+      "A.",
+      "B.",
+      "C.",
+      "D."
+    ],
+    "answer": "BC",
+    "raw_answer": "BC:@RequestMapping(\"/add\") public String addBook(Book book, Model model){ ........ model.addAttribute(\"bookInfo\", book) ........ } ; @RequestMapping(\"/add\") public String addBook(@ModelAttribute(\"bookinfo\") Book book){.........} ;"
+  },
+  {
+    "id": 21,
+    "question": "控制器如果使用实体bean接受请求参数，则bean的属性名称必须和请求参数名称相同。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 22,
+    "question": "如果想使用处理方法的形参接受请求参数，则必须在形参前加上@RequestParam注解",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 23,
+    "question": "使用处理方法的形参接收请求参数，则要求形参名称和请求参数名称必须一致。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 24,
+    "question": "SpringMVC控制器处理方法中的return语句默认实现的重定向到视图。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 25,
+    "question": "在SpringMVC应用程序中所有请求都应该由DispatcherServlet进行处理。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 26,
+    "question": "使用注解@RequestParam接受请求参数，如果处理方法的形参名称和请求参数名称不一致，则不会报400错误。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 27,
+    "question": "SpringMVC应用中，数据访问层是模型（Model）的一部分",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 28,
+    "question": "SpringMVC应用中视图层（view）只能使用JSP",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 29,
+    "question": "\n下列页面定了四则运算的表单：\n<form action=\"_____________\"  method=\"post\">\n<input type=\"text\" name=\"op1\" value=\"${equation.op1}\">\n<select name=\"opr\">\n<option value=\"+\" ${equation.opr == '+' ? 'selected' : ''}>+</option>\n<option value=\"-\"  ${equation.opr == '-' ? 'selected' : ''}>-</option>\n<option value=\"*\"  ${equation.opr == '*' ? 'selected' : ''}>*</option>\n<option value=\"/\"  ${equation.opr == '/' ? 'selected' : ''}>/</option>\n</select>\n<input type=\"text\" name=\"op2\" value=\"${equation.op2}\">\n<input type=\"submit\" value=\"=\">\n<input type=\"text\" name=\"result\" value=\"${equation.result}\" disabled>\n</form>\n该表单对应的Controller中定了响应上述表单的端点：\n@Controller\n@Slf4j\n@RequestMapping(\"/arith\")\npublic class ArithmeticController {\nprivate CalculateService calculateService;\n@Autowired\npublic ArithmeticController(CalculateService calculateService) {\nthis.calculateService = calculateService;\n}\n@GetMapping(\"/\")\npublic String index() {\nreturn \"arithmetic\";\n}\n@PostMapping(\"/calcu\")\npublic String calcu(@ModelAttribute Equation equation) {\nlog.debug(\"算式: {} {} {}\",equation.getOp1(),equation.getOpr(),equation.getOp2());\ncalculateService.calculate(equation);\nreturn \"arithmetic\";\n}\n}\n如果程序的context-path为math，则表单actio属性处应该填写",
+    "type": "multiple_choice",
+    "options": [
+      "A. /math/arith",
+      "B. /arith/calcu",
+      "C. /math/calcu",
+      "D. /math/arith/calcu"
+    ],
+    "answer": "D",
+    "raw_answer": "D:/math/arith/calcu;"
+  },
+  {
+    "id": 30,
+    "question": "\nSpring MVC程序的配置类中有如下配置：\n@Configuration\n@EnableWebMvc\n@ComponentScan(basePackages ={\"controller\",\"service\"})\npublic class SpringMVCConfig implements WebMvcConfigurer {\n@Override\npublic void addResourceHandlers(ResourceHandlerRegistry registry) {\nregistry.addResourceHandler(\"/image/\").addResourceLocations(\"/img/\");\nregistry.addResourceHandler(\"/css/\").addResourceLocations(\"/css/\");\nregistry.addResourceHandler(\"/js/\").addResourceLocations(\"/js/\");\n}\n}\n如果程序的context-path为test，在img目录下有rose.jpg图片，为确保能获取该图片，则页面的img元素该如何编写(该页面的实际的访问路径未知)：\n<img src=\"___________\" >",
+    "type": "multiple_choice",
+    "options": [
+      "A. image/rose.jpg",
+      "B. img/rose.jpg",
+      "C. /test/img/rose.jpg",
+      "D. /test/image/rose.jpg",
+      "E. /image/rose.jpg",
+      "F. /img/rose.jpg"
+    ],
+    "answer": "D",
+    "raw_answer": "D:/test/image/rose.jpg;"
+  },
+  {
+    "id": 31,
+    "question": "关于@Autowired注解实现依赖注入的说法错误的是",
+    "type": "multiple_choice",
+    "options": [
+      "A. @Autowired可以标注在需要注入的属性上",
+      "B. @Autowired可以标注在需要注入对象的getter方法上",
+      "C. @Autowired可以标注在用于初始化注入对象的构造方法上",
+      "D. @Autowired可以标注在需要注入对象的setter方法上"
+    ],
+    "answer": "B",
+    "raw_answer": "B:@Autowired可以标注在需要注入对象的getter方法上;"
+  },
+  {
+    "id": 32,
+    "question": "\n访问arithmetic页面的端点定义在下面代码中：\n@Controller\n@RequestMapping(\"/arith\")\npublic class ArithmeticController {\nprivate CalculateService calculateService;\n@Autowired\npublic ArithmeticController(CalculateService calculateService) {\nthis.calculateService = calculateService;\n}\n@GetMapping(\"/\")\npublic String index() {\nreturn \"arithmetic\";\n}\n}\n项目的context-path为math，端口为8080，则访问arithmetic页面的URL为：",
+    "type": "multiple_choice",
+    "options": [
+      "A. http://xxxxxxxx:8080/arith/math",
+      "B. http://xxxxxxxx:8080/arith/",
+      "C. http://xxxxxxxx:8080/math/arith/",
+      "D. http://xxxxxxxx:8080/math/arith"
+    ],
+    "answer": "C",
+    "raw_answer": "C:http://xxxxxxxx:8080/math/arith/;"
+  },
+  {
+    "id": 33,
+    "question": "\n接受表单请求的Controller方法如下：\n@PostMapping(\"/calcu\")\npublic String calcu(@ModelAttribute Equation equation) {\nlog.debug(\"算式: {} {} {}\",equation.getOp1(),equation.getOpr(),equation.getOp2());\ncalculateService.calculate(equation);\nreturn \"arithmetic\";\n}\n以下说法正确的是：",
+    "type": "multiple_choice",
+    "options": [
+      "A. 此处@ModelAttribute的作用是确保执行指定的方法",
+      "B. 此处@ModelAttribute的作用可有可无",
+      "C. @ModelAttribute的作用是确保形参equation能接受到参数，如果equation的属性名与请求名不一致，会报400错误",
+      "D."
+    ],
+    "answer": "D",
+    "raw_answer": "D:@ModelAttribute的作用是将形参暴露为模型，保存在model中，供arithmetic组件使用 ;"
+  },
+  {
+    "id": 34,
+    "question": "SpringMVC控制器处理方法中的return语句默认实现的重定向到视图。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 35,
+    "question": "重定向和转发一样，只存在一组request/response对象",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 36,
+    "question": "如果一个请求需要由多个组件完成处理，则组件之间应该采用重定向跳转。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 37,
+    "question": "Spring Boot的应用程序一般打包为",
+    "type": "multiple_choice",
+    "options": [
+      "A. .jar",
+      "B. .war"
+    ],
+    "answer": "A",
+    "raw_answer": "A:.jar;"
+  },
+  {
+    "id": 38,
+    "question": "如果想改变SpringBoot的默认配置，可选的、合适的途径有",
+    "type": "multiple_response",
+    "options": [
+      "A. 在全局配置文件中修改默认属性",
+      "B. 重新定义或声明某些默认的Bean",
+      "C. 创建和声明自定义的Bean",
+      "D. 修改SpringBoot 源代码后重新编译构建"
+    ],
+    "answer": "AB",
+    "raw_answer": "AB:在全局配置文件中修改默认属性; 重新定义或声明某些默认的Bean;"
+  },
+  {
+    "id": 39,
+    "question": "以下哪些注解或对象可以读取全局配置文件application.properties的信息",
+    "type": "multiple_response",
+    "options": [
+      "A. Environment 对象",
+      "B. @ConfigurationProperties",
+      "C. @PropertySource",
+      "D. @Value"
+    ],
+    "answer": "ABD",
+    "raw_answer": "ABD:Environment 对象; @ConfigurationProperties; @Value;"
+  },
+  {
+    "id": 40,
+    "question": "可以作为springboot应用程序全局配置文件的有",
+    "type": "multiple_response",
+    "options": [
+      "A. application.yml",
+      "B. application.config",
+      "C. application.yaml",
+      "D. application.properties"
+    ],
+    "answer": "ACD",
+    "raw_answer": "ACD:application.yml; application.yaml; application.properties;"
+  },
+  {
+    "id": 41,
+    "question": "SpringBoot应用程序，需要自己单独配置Web容器。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 42,
+    "question": "SpringBoot的全局配置文件只能修改项目的默认配置，不能添加项目特有的配置。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 43,
+    "question": "application.properties和application.yml不能共存。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 44,
+    "question": "Spring Boot应用程序应该需要配置Tomcat等容器。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 45,
+    "question": "Spring Boot应用程序是从main方法开始运行的。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 46,
+    "question": "SpringBoot使用MAVEN等构件工具构件应用程序。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 47,
+    "question": "SpringBoot是完全不同于Spring框架的全新框架。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 48,
+    "question": "小明的SpringMVC应用的包com.example.demo下创建了该应用的Java配置类，以下哪个组合是正确的",
+    "type": "multiple_choice",
+    "options": [
+      "A.",
+      "B.",
+      "C.",
+      "D."
+    ],
+    "answer": "D",
+    "raw_answer": "D:Java配置类中的扫描注解为：@ComponentScan 控制器类所在包为com.example.demo.controller;"
+  },
+  {
+    "id": 49,
+    "question": "SpringBoot应用中，如果@SpringBootApplication注解的入口类放置在项目的com.example.hello包下，则其他的配置类和用注解声明的bean类应该放在",
+    "type": "multiple_choice",
+    "options": [
+      "A. 可以放在com.example包下",
+      "B. 放在com.example.hello包及其子包下",
+      "C. 只能放在com.example.hello包下",
+      "D. 可以放在任意包下"
+    ],
+    "answer": "B",
+    "raw_answer": "B:放在com.example.hello包及其子包下;"
+  },
+  {
+    "id": 50,
+    "question": "作为控制器方法参数的Model对象model，其存在的生命周期是",
+    "type": "multiple_choice",
+    "options": [
+      "A. application",
+      "B. page",
+      "C. request",
+      "D. session"
+    ],
+    "answer": "C",
+    "raw_answer": "C:request;"
+  },
+  {
+    "id": 51,
+    "question": "SpringMVC的核心控制器是",
+    "type": "multiple_choice",
+    "options": [
+      "A. Filter",
+      "B. JSP",
+      "C. Servlet",
+      "D. Listener"
+    ],
+    "answer": "C",
+    "raw_answer": "C:Servlet;"
+  },
+  {
+    "id": 52,
+    "question": "Spring Boot的应用程序一般打包为",
+    "type": "multiple_choice",
+    "options": [
+      "A. .jar",
+      "B. .war"
+    ],
+    "answer": "A",
+    "raw_answer": "A:.jar;"
+  },
+  {
+    "id": 53,
+    "question": "\n有如下控制器类\n@RequestMapping(\"/user\")\npublic class TestController(){\n@RequestMapping(\"/findByName\")\npublic String addUser(User user, Model){ .....}\n}\n如果该应用的上下文路径（context-path）为/myoa，则下列哪个请求会执行addUser方法",
+    "type": "multiple_choice",
+    "options": [
+      "A. http://localhost:8080/myoa/user/findByName",
+      "B. http://localhost:8080/user/findByName",
+      "C. http://localhost:8080/myoa/user/",
+      "D. http://localhost:8080/myoa/findByName"
+    ],
+    "answer": "A",
+    "raw_answer": "A:http://localhost:8080/myoa/user/findByName;"
+  },
+  {
+    "id": 54,
+    "question": "Thymeleaf的动态模板功能通常是放置在HTML标签的___________上实现的。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 标签内容",
+      "B. 使用动态标签库",
+      "C. 属性",
+      "D. 标签名"
+    ],
+    "answer": "C",
+    "raw_answer": "C:属性;"
+  },
+  {
+    "id": 55,
+    "question": "SpringBoot使用MAVEN等构件工具构件应用程序。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 56,
+    "question": "控制器如果使用实体bean接受请求参数，则bean的属性名称必须和请求参数名称相同。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 57,
+    "question": "Spring Boot应用程序是从main方法开始运行的。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 58,
+    "question": "Spring Boot应用程序应该需要配置Tomcat等容器。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 59,
+    "question": "使用注解@RequestParam接受请求参数，如果处理方法的形参名称和请求参数名称不一致，则不会报400错误。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 60,
+    "question": "SpringBoot是完全不同于Spring框架的全新框架。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 61,
+    "question": "SpringBoot的全局配置文件只能修改项目的默认配置，不能添加项目特有的配置。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 62,
+    "question": "在SpringMVC应用程序中所有请求都应该由DispatcherServlet进行处理。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 63,
+    "question": "有表单<form th:action=\"@{/login}\" th:object=\"${user}\">...</form>，这里的user对象不必一定存在。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 64,
+    "question": "\n想让参数book暴露为模型数据，且其名称为bookInfo，则以下控制器方法正确的有，",
+    "type": "multiple_response",
+    "options": [
+      "A.",
+      "B.",
+      "C.",
+      "D."
+    ],
+    "answer": "AB",
+    "raw_answer": "AB:@RequestMapping(\"/add\") public String addBook(@ModelAttribute(\"bookinfo\") Book book){.........} ; @RequestMapping(\"/add\") public String addBook(Book book, Model model){ ........ model.addAttribute(\"bookInfo\", book) ........ } ;"
+  },
+  {
+    "id": 65,
+    "question": "可以作为springboot应用程序全局配置文件的有",
+    "type": "multiple_response",
+    "options": [
+      "A. application.yml",
+      "B. application.config",
+      "C. application.properties",
+      "D. application.yaml"
+    ],
+    "answer": "ACD",
+    "raw_answer": "ACD:application.yml; application.properties; application.yaml;"
+  },
+  {
+    "id": 66,
+    "question": "有表单<form th:action=\"@{/login}\">...</form>，当前项目上下文路径(context-path)为myoa，则转换成html后，action的属性值应该是哪一个。（至少选一项）",
+    "type": "multiple_response",
+    "options": [
+      "A. /myoa/login",
+      "B. /login",
+      "C. login",
+      "D. myoa/login"
+    ],
+    "answer": "A",
+    "raw_answer": "A:/myoa/login;"
+  },
+  {
+    "id": 67,
+    "question": "SpringMVC中属于控制器的有",
+    "type": "multiple_response",
+    "options": [
+      "A. JSP、HTML",
+      "B. HandlerMapping",
+      "C. DispatcherServlet",
+      "D. 各个Controller"
+    ],
+    "answer": "BCD",
+    "raw_answer": "BCD:HandlerMapping; DispatcherServlet; 各个Controller;"
+  },
+  {
+    "id": 68,
+    "question": "关于SpringMVC文件上传，说法正确的是",
+    "type": "multiple_response",
+    "options": [
+      "A. 需要在SpringMVC应用的配置中配置MultipartResolver",
+      "B. 传页面表单中的enctype属性必须为multipart/form-data",
+      "C. 上传页面表单中的method属性必须为post",
+      "D. 控制器方法参数中需有一个类型为MultipartFile的参数"
+    ],
+    "answer": "ABCD",
+    "raw_answer": "ABCD:需要在SpringMVC应用的配置中配置MultipartResolver; 传页面表单中的enctype属性必须为multipart/form-data; 上传页面表单中的method属性必须为post; 控制器方法参数中需有一个类型为MultipartFile的参数;"
+  },
+  {
+    "id": 69,
+    "question": "以下哪些是正确的JSON对象",
+    "type": "multiple_response",
+    "options": [
+      "A. [\"足球\",\"篮球\",\"排球\"]",
+      "B.",
+      "C. [\"张三\",  {\"name\":\"李四\", \"age\":20}, [\"王五\", \"马六\"]]",
+      "D. {\"tname\":\"张三\", \"tid\":1001}"
+    ],
+    "answer": "ABCD",
+    "raw_answer": "ABCD:[\"足球\",\"篮球\",\"排球\"]; { \"name\":\"jack\", \"hobbys\":[\"旅游\",\"美食\",\"电游\"], \"pet\": {\"type\":\"dog\", \"name\":\"wangwang\"} }; [\"张三\", {\"name\":\"李四\", \"age\":20}, [\"王五\", \"马六\"]]; {\"tname\":\"张三\", \"tid\":1001};"
+  },
+  {
+    "id": 70,
+    "question": "@RestController相当于哪几个注解的组合",
+    "type": "multiple_response",
+    "options": [
+      "A. @RequestBody",
+      "B. @Service",
+      "C. @Controller",
+      "D. @ResponseBody"
+    ],
+    "answer": "CD",
+    "raw_answer": "CD:@Controller; @ResponseBody;"
+  },
+  {
+    "id": 71,
+    "question": "JSON数据结构中值（value）的数据类型可以是",
+    "type": "multiple_response",
+    "options": [
+      "A. Object",
+      "B. true/false",
+      "C. Number",
+      "D. Array",
+      "E. String"
+    ],
+    "answer": "ABCDE",
+    "raw_answer": "ABCDE:Object; true/false; Number; Array; String;"
+  },
+  {
+    "id": 72,
+    "question": "JSON的对象结构中，其key的数据类型必须为String",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 73,
+    "question": "JSON的两种数据结构可以嵌套或组合，构成更为复杂的结构",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 74,
+    "question": "SpringMVC实现浏览器和控制器处理方法间的JSON数据交互时，同时使用了@RequestBody和@ResponseBody注解，则处理器方法的return语句中返回的应该是一个Java对象。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 75,
+    "question": "SpringMVC实现浏览器和控制器处理方法间的JSON数据交互时，注解@RequestBody使用在处理方法上。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 76,
+    "question": "SpringMVC实现浏览器和控制器处理方法间的JSON数据交互时，使用了@ResponseBody注解，则处理方法返回的是视图。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 77,
+    "question": "JSON是基于纯文本的数据格式",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 78,
+    "question": "文件下载前需要对文件名进行编码，比如保存文件名的变量为filename，需要filename=URLEncoder.encode(filename,\"UTF-8\")转换为才能确保文件能正常下载，其理由是：",
+    "type": "multiple_choice",
+    "options": [
+      "A. 确保文件路径正确",
+      "B. 需要对文件名进行加密",
+      "C. 原文件名的编码不是UTF-8，需要转换为UTF-8编码格式",
+      "D. 文件名中可能包含空格等不能在URL出现的字符，需要对这些字符进行转码（编码）以符合URL的规则要求"
+    ],
+    "answer": "D",
+    "raw_answer": "D:文件名中可能包含空格等不能在URL出现的字符，需要对这些字符进行转码（编码）以符合URL的规则要求;"
+  },
+  {
+    "id": 79,
+    "question": "在文件下载时，响应头（header）的Content-Type属性应该是",
+    "type": "multiple_choice",
+    "options": [
+      "A. application/octet-stream",
+      "B. application/xhtml+xml",
+      "C. application/json",
+      "D. text/html",
+      "E. application/stream+json"
+    ],
+    "answer": "A",
+    "raw_answer": "A:application/octet-stream;"
+  },
+  {
+    "id": 80,
+    "question": "文件下载时，需要设置响应的实体头（header）的哪个属性，用于控制文件下载的行为",
+    "type": "multiple_choice",
+    "options": [
+      "A. Content-Disposition",
+      "B. Content-Encoding",
+      "C. Content-Type",
+      "D. Content-Length"
+    ],
+    "answer": "A",
+    "raw_answer": "A:Content-Disposition;"
+  },
+  {
+    "id": 81,
+    "question": "可以使用Map类型封装查询结果集",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 82,
+    "question": "MyBatis映射文件中<mappers>元素是配置文件的根元素，它包含一个namespace属性，该属性为这个<mappers>指定了唯一的命名空间。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 83,
+    "question": "映射接口文件和映射SQL文件必须在同一个包路径下。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 84,
+    "question": "各类SQL元素的resultType和parameterType很多时候可以忽略不写，因为可以自动推断",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 85,
+    "question": "动态SQL可以根据参入的参数的具体情况动态的拼接SQL语句",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 86,
+    "question": "\nSpringBoot全局文件中配置MyBatis的配置项mybatis.type-aliases-package的作用是给实体类取别名，其值是实体类的别名。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 87,
+    "question": "在MyBatis中SQL注解和XML映射文件不能同时共存。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 88,
+    "question": "在select元素将查询的结果集封装到resultType指定的实体类的对象中，它是无条件的，可以任意定义实体类",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 89,
+    "question": "如果实体类和对应的数据库表的列名不一致，唯一的解决办法就是使用ReusltMap定义类到表的映射",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 90,
+    "question": "可以使用Map类型作为参数传递查询条件",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 91,
+    "question": "使用mybaits-spring整合MyBatis与Spring时，或者MyBatis集成在SpringBoot中时，当映射器接口和SQL映射文件在同一个包路径下时，不需要再额外指定SQL映射文件的位置了。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 92,
+    "question": "定好的resultMap不可以重复使用",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "B",
+    "raw_answer": "错"
+  },
+  {
+    "id": 93,
+    "question": "当表中的列名与对应对象的属性名称完全一致时，在查询映射文件中可以不使用resultMap属性。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 对",
+      "B. 错"
+    ],
+    "answer": "A",
+    "raw_answer": "对"
+  },
+  {
+    "id": 94,
+    "question": "MyBatis的SQL映射文件中，以下属于常见元素的是",
+    "type": "multiple_response",
+    "options": [
+      "A. <resultMap>",
+      "B. <select>",
+      "C. <update>",
+      "D. <insert>",
+      "E. <sql>",
+      "F. <delete>"
+    ],
+    "answer": "ABCDEF",
+    "raw_answer": "ABCDEF:<resultMap>; <select>; <update>; <insert>; <sql>; <delete>;"
+  },
+  {
+    "id": 95,
+    "question": "下列选项中，对使用MyBatis编程的好处说法正确的是（）。",
+    "type": "multiple_response",
+    "options": [
+      "A. 自动将Java对象映射至 SQL语句。",
+      "B. 实现了SQL与Java 代码的分离。",
+      "C. 不用配置数据连接池，也可以高效的管理数据库连接。",
+      "D. 自动将SQL执行结果映射至Java对象。"
+    ],
+    "answer": "ABD",
+    "raw_answer": "ABD:自动将Java对象映射至 SQL语句。; 实现了SQL与Java 代码的分离。; 自动将SQL执行结果映射至Java对象。;"
+  },
+  {
+    "id": 96,
+    "question": "下面关于映射文件中的<mapper>元素的属性，说法正确的是（）。",
+    "type": "multiple_choice",
+    "options": [
+      "A. resultType属性的值表示传入的参数类型",
+      "B. 以上说法都不正确",
+      "C. parameterType属性的值表示的是返回的实体类对象",
+      "D. namespace属性的值通常设置为对应实体类的全限定类名"
+    ],
+    "answer": "D",
+    "raw_answer": "D:namespace属性的值通常设置为对应实体类的全限定类名;"
+  },
+  {
+    "id": 97,
+    "question": "以下关于<select>元素及其属性说法错误的是（）。",
+    "type": "multiple_choice",
+    "options": [
+      "A. resultMap表示外部resultMap的命名引用，返回时可以同时使用resultType和resultMap",
+      "B. 在同一个映射文件中可以配置多个<select>元素",
+      "C. <select>元素用来映射查询语句，它可以帮助我们从数据库中读取出数据，并组装数据给业务开发人员",
+      "D. parameterType属性表示传入SQL语句的参数类的全限定名或者别名"
+    ],
+    "answer": "A",
+    "raw_answer": "A:resultMap表示外部resultMap的命名引用，返回时可以同时使用resultType和resultMap;"
+  },
+  {
+    "id": 98,
+    "question": "下列关于<mapper>元素的说法正确的是（）。",
+    "type": "multiple_choice",
+    "options": [
+      "A. <mapper>元素不是映射文件的根元素",
+      "B. <mapper>元素是映射文件的根元素",
+      "C. <mapper>元素的namespace属性是不唯一的",
+      "D. <mapper>元素的namespace属性值的命名不一定跟接口同名"
+    ],
+    "answer": "B",
+    "raw_answer": "B:<mapper>元素是映射文件的根元素;"
+  },
+  {
+    "id": 99,
+    "question": "以下有关MyBatis映射文件中<insert>元素说法正确的是（）。",
+    "type": "multiple_choice",
+    "options": [
+      "A. <insert>元素的属性与<select>元素的属性相同",
+      "B. <insert>元素用于映射插入语句，在执行完元素中定义的SQL语句后，没有返回结果",
+      "C. keyColumn属性用于设置第几列是主键，当主键列不是表中的第一列时需要设置",
+      "D. useGeneratedKeys（仅对insert有用）此属性会使MyBatis使用JDBC的getGeneratedKeys()方法来获取由数据库内部生产的主键"
+    ],
+    "answer": "C",
+    "raw_answer": "C:keyColumn属性用于设置第几列是主键，当主键列不是表中的第一列时需要设置;"
+  },
+  {
+    "id": 100,
+    "question": "下列关于MyBatis中默认的常见Java类型的别名，正确的是（）。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 映射类型为Byte，则别名为Byte",
+      "B. 映射类型为Date，则别名为Date",
+      "C. 映射类型为byte，则别名为Byte",
+      "D. 映射类型为String，则别名为string"
+    ],
+    "answer": "D",
+    "raw_answer": "D:映射类型为String，则别名为string;"
+  },
+  {
+    "id": 101,
+    "question": "下面关于MyBatis提供的用于解决JDBC编程劣势的方案，说法错误的是（）。",
+    "type": "multiple_choice",
+    "options": [
+      "A. 在SqlMapConfig.xml中配置数据链接池，使用连接池管理数据库链接",
+      "B. MyBatis自动将Java对象映射至SQL语句，通过Statement中的parameterType定义输入参数的类型",
+      "C. MyBatis将SQL语句配置在MyBatis的映射文件中，未与Java代码的分离",
+      "D. MyBatis自动将SQL执行结果映射至Java对象，通过Statement中的resultType定义输出结果的类型"
+    ],
+    "answer": "C",
+    "raw_answer": "C:MyBatis将SQL语句配置在MyBatis的映射文件中，未与Java代码的分离;"
+  }
+]
