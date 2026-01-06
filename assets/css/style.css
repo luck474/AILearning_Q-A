@@ -283,10 +283,12 @@ body {
     border-radius: var(--radius-md);
     color: var(--text-secondary);
     text-align: left;
+    white-space: pre-wrap;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: inherit;
-    font-size: 1rem;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
     position: relative;
     overflow: hidden;
 }

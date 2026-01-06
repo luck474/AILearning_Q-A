@@ -138,37 +138,12 @@
     "question": "在PyTorch中构建一个10层神经网络，要求第2层和第8层共享相同的参数（即在训练过程中始终保持一致）。以下哪种实现方式最正确、可靠、高效？",
     "type": "multiple_choice",
     "options": [
-      "A.",
-      "class Net(nn.Module):",
-      "def __init__(self):",
-      "super().__init__()",
-      "self.layers = nn.ModuleList([nn.Linear(100, 100) for _ in range(10)])",
-      "# 在初始化后手动复制参数",
-      "self.layers[7].weight.data.copy_(self.layers[1].weight.data)",
-      "self.layers[7].bias.data.copy_(self.layers[1].bias.data)"
+      "A.\nclass Net(nn.Module):\n    def __init__(self):\n        super().__init__()\n        self.layers = nn.ModuleList([nn.Linear(100, 100) for _ in range(10)])\n        # 在初始化后手动复制参数\n        self.layers[7].weight.data.copy_(self.layers[1].weight.data)\n        self.layers[7].bias.data.copy_(self.layers[1].bias.data)",
+      "B.\nclass Net(nn.Module):\n    def __init__(self):\n        super().__init__()\n        self.shared_layer = nn.Linear(100, 100)\n        self.layers = nn.ModuleList()\n        for i in range(10):\n            if i == 1 or i == 7:  # 第2层和第8层\n                self.layers.append(self.shared_layer)\n            else:\n                self.layers.append(nn.Linear(100, 100))",
+      "C.\nclass Net(nn.Module):\n    def __init__(self):\n        super().__init__()\n        self.layers = nn.ModuleList([nn.Linear(100, 100) for _ in range(10)])\n    \n    def forward(self, x):\n        for i, layer in enumerate(self.layers):\n            if i == 7:  # 第8层\n                x = self.layers[1](x)  # 使用第2层进行计算\n            else:\n                x = layer(x)\n        return x",
+      "D.\nclass Net(nn.Module):\n    def __init__(self):\n        super().__init__()\n        self.layer2 = nn.Linear(100, 100)\n        self.layer8 = nn.Linear(100, 100)\n        # 其他层...\n    \n    def forward(self, x):\n        # 在训练循环中每轮手动同步参数\n        if self.training:\n            self.layer8.weight.data = self.layer2.weight.data\n            self.layer8.bias.data = self.layer2.bias.data\n        # ...前向传播逻辑"
     ],
-    "answer": "A"
-  },
-  {
-    "id": 14,
-    "question": "B.",
-    "type": "unknown",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "id": 15,
-    "question": "C.",
-    "type": "unknown",
-    "options": [],
-    "answer": ""
-  },
-  {
-    "id": 16,
-    "question": "D.",
-    "type": "unknown",
-    "options": [],
-    "answer": ""
+    "answer": "B"
   },
   {
     "id": 17,
